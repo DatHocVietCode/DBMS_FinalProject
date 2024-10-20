@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DBMS_Final_Project.view;
+using DBMS_Final_Project.view.ChucNangBanHang;
 
 namespace DBMS_Final_Project
 {
@@ -17,7 +18,7 @@ namespace DBMS_Final_Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new login());
+            Application.Run(new main_ban_hang());
         }
     }
 }
