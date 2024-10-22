@@ -1,55 +1,171 @@
 ﻿using DBMS_Final_Project.control.converter;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 namespace DBMS_Final_Project.view.ChucNangBanHang
 {
     public partial class main_ban_hang : Form
     {
+        Database instace = new Database();
+        int IDHoaDonHienTai = -1;
+        decimal tongtien = 0;
+        int idkhachhang = 0;
+        decimal giamgia = 0;
         public main_ban_hang()
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Lấy giá trị hiện tại cộng cho một lượng input, sau đó thiết lập lên label
+        /// </summary>
+        /// <param name="value"></param>
+        private void setTongTien(decimal value)
+        {
+            tongtien = value;
+            lbl_tong_tien.Text = tongtien.ToString("#,0") + "VND";
+        }
         private void tp_spdv_Click(object sender, EventArgs e)
         {
 
         }
-
-        private void main_ban_hang_Load(object sender, EventArgs e)
+        private void khach_hang_Load()
+        {
+            btn_tim_kiem_thanh_vien.ImageList = imageList;
+            btn_tim_kiem_thanh_vien.Image = imageList.Images[0];
+            gv_thanh_vien.DataSource = instace.ExecuteQuery("select * from KhachHang");
+        }
+        private void hoa_don_Load()
+        {
+            cb_ngay_tao.SelectedIndex = 0;
+            cb_tong_tien.SelectedIndex = 0;
+            gv_hoadon_dathanhtoan.DataSource = instace.ExecuteQuery("select * from HoaDon where Trang_Thai = N'Đã thanh toán'");
+            gv_hoadon_chuathanhtoan.DataSource = instace.ExecuteQuery("select * from HoaDon where Trang_Thai = N'Chưa thanh toán'");
+        }
+        private void san_pham_va_dich_vu_Load()
         {
             cb_gia.SelectedIndex = 0;
             cb_alphabet.SelectedIndex = 0;
-            cb_ngay_tao.SelectedIndex = 0;
-            cb_tong_tien.SelectedIndex = 0;
             string img_link = @"assets\images\chucnangbanhang\icon\Search_Icon.png";
             img_link = imageLinkConverter.Convert(img_link).ToString();
             btn_tim_kiem.ImageList = imageList;
             btn_tim_kiem.Image = imageList.Images[0];
-            btn_tim_kiem_thanh_vien.ImageList = imageList;
-            btn_tim_kiem_thanh_vien.Image = imageList.Images[0];
-
             lv_hoa_don.View = View.Details;
             // Thêm các cột vào ListView
+            thu_cung_load();
+            vat_pham_load();
+            dich_vu_Load();
+        }
+
+        private void vat_pham_load()
+        {
+            //throw new NotImplementedException();
+        }
+
+        private void thu_cung_load()
+        {
+            DataTable thucung = instace.ExecuteQuery("select * from ThuCung");
+            foreach (DataRow row in thucung.Rows)
+            {
+                int id = Convert.ToInt32(row["Ma_Thu_Cung"]);
+                string command = string.Format("Select Ten, Gia_Ban_Goc, Gia_Khuyen_Mai from SanPhamVaDichVu where Ma_SPDV = {0}", id);
+                DataTable dataTable = instace.ExecuteQuery(command);
+                string name = dataTable.Rows[0]["Ten"].ToString();
+                decimal giagoc = Convert.ToDecimal(dataTable.Rows[0]["Gia_Ban_Goc"]);
+                decimal giauudai = Convert.ToDecimal(dataTable.Rows[0]["Gia_Khuyen_Mai"]);
+
+                command = string.Format("Select * from HinhAnh where Ma_SPDV = {0}", id);
+                dataTable = instace.ExecuteQuery(command);
+                string link = dataTable.Rows[0]["Duong_Dan"].ToString();
+                link = imageLinkConverter.Convert(link).ToString();
+
+                cardvatpham cardvatpham = new cardvatpham(id, name, giagoc, giauudai, link);
+                cardvatpham.addHoaDon += AddHoaDon;
+
+                flp_thu_cung.Controls.Add(cardvatpham);
+
+            }
+        }
+
+        private void dich_vu_Load()
+        {
+            //throw new NotImplementedException();
+        }
+
+        private void main_ban_hang_Load(object sender, EventArgs e)
+        {
+            tao_hoa_don_Load();
+            san_pham_va_dich_vu_Load();
+            hoa_don_Load();
+            khach_hang_Load();
+            //DataTable sanphamdichvu = instace.ExecuteQuery("select * from SanPhamVaDichVu");
+        }
+
+        private void tao_hoa_don_Load()
+        {
             lv_hoa_don.Columns.Add("ID", 50); // Tên cột và độ rộng
             lv_hoa_don.Columns.Add("Tên sản phẩm", 150);
             lv_hoa_don.Columns.Add("Số lượng", 70);
             lv_hoa_don.Columns.Add("Đơn giá", 100);
             lv_hoa_don.Columns.Add("Thành tiền", 100);
-            for (int i = 0; i < 10; i++)
+        }
+
+        private void AddHoaDon(object sender, EventArgs e)
+        {
+            cardvatpham item = (cardvatpham)sender;
+            if (IDHoaDonHienTai == -1)
             {
-                string[] row = new string[] { i.ToString(), "dat", "10", "100", "1000" };
-                ListViewItem lv = new ListViewItem(row);
-                lv_hoa_don.Items.Add(lv);
+                // Tạo hóa đơn mới
+                string cmd = "proc_TaoHoaDonMoi";
+                IDHoaDonHienTai = Convert.ToInt16(instace.getSingleResultFromProc(cmd));
             }
+           
+            // Thêm vào chi tiết hóa đơn
+            object[] parameterValues = { IDHoaDonHienTai, item.Id, item.Ten ,item.GiaUudai };
+            string[] parameterNames = { "@id_hoadon", "@id_vatpham", "@ten", "@dongia" };
+            string SQLcmd = "proc_ThemChiTietHoaDon";
+            decimal thanhtien = Convert.ToDecimal(instace.getSingleResultFromProc(SQLcmd, parameterValues, parameterNames));
+
+            // Hiển thị lên list view
+            // Bước lấy dữ liệu
+            string sqlcmd = "select Tong_Tien from HoaDon where Ma_Hoa_Don = " + IDHoaDonHienTai;
+            DataTable result = instace.ExecuteQuery(sqlcmd);
+
+            decimal tongtien = 0;
+            if (result.Rows.Count > 0) // Kiểm tra nếu có kết quả
+            {
+                var value = result.Rows[0]["Tong_Tien"];
+
+                // Kiểm tra nếu giá trị là DBNull trước khi chuyển đổi
+                if (value != DBNull.Value)
+                {
+                    tongtien = Convert.ToDecimal(value); // Lấy tổng tiền từ hàng đầu tiên
+                }
+            }
+            string[] row = new string[] { item.Id.ToString(), item.Ten, (thanhtien / item.GiaUudai).ToString("#,0"), item.GiaUudai.ToString("#,0"), tongtien.ToString("#,0") };
+
+            // Bước hiển thị
+            bool isExist = false;
+            ListViewItem currentItem = null;
+            foreach (ListViewItem record in lv_hoa_don.Items)
+            {
+                if (record.SubItems[0].Text == item.Id.ToString())
+                    { isExist = true; currentItem = record; break;  }
+            }
+            if (isExist)
+            {
+                lv_hoa_don.Items.Remove(currentItem);
+                currentItem = new ListViewItem(row);
+                lv_hoa_don.Items.Add(currentItem);
+            }
+            else
+            {
+                currentItem = new ListViewItem(row);
+                lv_hoa_don.Items.Add(currentItem);
+            }
+
+            // cập nhật tổng tiền
+            setTongTien(tongtien);
+       
         }
 
         private void txt_tim_kiem_TextChanged(object sender, EventArgs e)
@@ -71,8 +187,12 @@ namespace DBMS_Final_Project.view.ChucNangBanHang
         {
             if (lv_hoa_don.SelectedItems == null)
                 return;
-            foreach (var item in lv_hoa_don.SelectedItems)
+            foreach (ListViewItem item in lv_hoa_don.SelectedItems)
             {
+                setTongTien(Convert.ToDecimal(item.SubItems[4].Text) * -1);
+               /* tongtien -= Convert.ToDecimal(item.SubItems[4].Text);
+                lbl_tong_tien.Text = tongtien.ToString("#,0") + "VND";*/
+                // Xóa item khỏi ListView
                 lv_hoa_don.Items.Remove((ListViewItem)item);
             }
         }
@@ -107,7 +227,13 @@ namespace DBMS_Final_Project.view.ChucNangBanHang
 
         private void btn_huy_bo_Click(object sender, EventArgs e)
         {
+            string sqlcmd = "proc_XoaHoaDon";
+            object[] paramValues = { IDHoaDonHienTai.ToString()};
+            string[] paramNames = { "@id_hoadon" };
+            instace.getSingleResultFromProc(sqlcmd, paramValues, paramNames);
             lv_hoa_don.Items.Clear();
+            IDHoaDonHienTai = -1;
+            setTongTien(0);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -154,6 +280,36 @@ namespace DBMS_Final_Project.view.ChucNangBanHang
         private void txt_tim_kiem_thanh_vien_MouseClick(object sender, MouseEventArgs e)
         {
             txt_tim_kiem_thanh_vien.Clear();
+        }
+
+        private void flp_thu_cung_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_id_khachhang_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tc_ban_hang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tc_ban_hang.SelectedIndex == 0)
+                san_pham_va_dich_vu_Load();
+            else if (tc_ban_hang.SelectedIndex == 1)
+                hoa_don_Load();
+            else 
+                khach_hang_Load();
+        }
+
+        private void tc_hoa_don_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            hoa_don_Load();
         }
     }
 }

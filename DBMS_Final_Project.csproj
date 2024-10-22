@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="control\converter\imageLinkConverter.cs" />
+    <Compile Include="database\DataBase.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +58,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="view\ChucNangBanHang\cardvatpham.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\ChucNangBanHang\cardvatpham.Designer.cs">
+      <DependentUpon>cardvatpham.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\ChucNangBanHang\loc_khoang_gia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +109,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="view\ChucNangBanHang\cardvatpham.resx">
+      <DependentUpon>cardvatpham.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\ChucNangBanHang\loc_khoang_gia.resx">
       <DependentUpon>loc_khoang_gia.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,6 +145,31 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\images\chucnangbanhang\icon\Search_Icon.png" />
+    <Content Include="assets\images\thucung\10\z5625614256150_cc8dc907e1c6c2d3b2797b14f099e1f2.jpg" />
+    <Content Include="assets\images\thucung\11\anh-cho-phu-quoc-9229297788.jpg" />
+    <Content Include="assets\images\thucung\11\anh-cho-phu-quoc-9229298788.jpg" />
+    <Content Include="assets\images\thucung\12\cho-boxer.jpg" />
+    <Content Include="assets\images\thucung\1\1878-phoc-soc-trang-mat-gau-truong-thanh-size-mini-duc-10th2m-16tr-1.jpg" />
+    <Content Include="assets\images\thucung\1\1878-phoc-soc-trang-mat-gau-truong-thanh-size-mini-duc-10th2m-16tr-2.jpg" />
+    <Content Include="assets\images\thucung\1\1878-phoc-soc-trang-mat-gau-truong-thanh-size-mini-duc-10th2m-16tr-3.jpg" />
+    <Content Include="assets\images\thucung\2\5fcc8c5bfede23807acf.jpg" />
+    <Content Include="assets\images\thucung\2\abb6f64b84ce599000df.jpg" />
+    <Content Include="assets\images\thucung\3\6735B0AB-DF78-45E6-8B3B-9269F86D700A.jpg" />
+    <Content Include="assets\images\thucung\3\98E8BBC1-FC87-45F0-98B7-00F8C4B425A8.jpeg" />
+    <Content Include="assets\images\thucung\3\BCCA86C2-F468-4D93-B0F9-E1C1F3386790.jpeg" />
+    <Content Include="assets\images\thucung\4\meo-aln-mau-xx-2th1m-duc-va-cai-35-6m-1.jpg" />
+    <Content Include="assets\images\thucung\4\meo-aln-mau-xx-2th1m-duc-va-cai-35-6m-2.jpg" />
+    <Content Include="assets\images\thucung\5\d.jpg" />
+    <Content Include="assets\images\thucung\5\f.jpg" />
+    <Content Include="assets\images\thucung\5\g.jpg" />
+    <Content Include="assets\images\thucung\6\2-bengal-1252-2048x1366.jpg" />
+    <Content Include="assets\images\thucung\7\1863-corgi-mat-xanh-duc-1.jpg" />
+    <Content Include="assets\images\thucung\7\1863-corgi-mat-xanh-duc-2-2048x1838.jpg" />
+    <Content Include="assets\images\thucung\7\1863-corgi-mat-xanh-duc-3-2014x2048.jpg" />
+    <Content Include="assets\images\thucung\8\1773-2048x1365.jpg" />
+    <Content Include="assets\images\thucung\9\anh-meo-ba-tu-292929.jpg" />
+    <Content Include="assets\images\thucung\9\anh-meo-ba-tu-29292988977.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

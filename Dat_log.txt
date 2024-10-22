@@ -1,0 +1,11 @@
+22/10/2024
+- Chỉnh sửa bảng hóa đơn, sửa trạng thái thành nvarchar
+- Chỉnh sửa trạng thái hóa đơn để trạng thái mặc định là "Chưa thanh toán"
+- Thêm 2 proc:
++ proc_TaoHoaDonMoi
++ proc_ThemChiTietHoaDon 
+- Chỉnh sửa giao diện trang bán hàng
+- Thêm chức năng add item vào hóa đơn
+- Thêm 1 record vào khách hàng:
+insert into KhachHang values (0, N'Khách vãng lai', null, null)
+- record này dùng chung cho tất cả khách vãng lai
