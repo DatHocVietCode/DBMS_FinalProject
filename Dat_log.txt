@@ -9,3 +9,4 @@
 - Thêm 1 record vào khách hàng:
 insert into KhachHang values (0, N'Khách vãng lai', null, null)
 - record này dùng chung cho tất cả khách vãng lai
+- Chỉnh sửa lại trigger alter TRIGGER trg_CapNhatTongTien, xử lý trường hợp update(mới) và cả insert (cũ)
