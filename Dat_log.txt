@@ -10,3 +10,12 @@
 insert into KhachHang values (0, N'Khách vãng lai', null, null)
 - record này dùng chung cho tất cả khách vãng lai
 - Chỉnh sửa lại trigger alter TRIGGER trg_CapNhatTongTien, xử lý trường hợp update(mới) và cả insert (cũ)
+
+23/10/2024
+- Thêm tính năng cho thanh tìm kiếm (done)
+- Sửa hàm lấy dữ liệu trong database getResultFromProc để cho nó trả về cả SQLreader
+- Chỉnh sửa proc proc_TimKiemTheoTen để làm việc với view (bỏ)
+- Thêm mới proc_TimKiemSanPhamVaDichVu (file word chinhsua23-10)
++ Proc này tích hợp tìm tất cả điều kiện một lần
+
+
