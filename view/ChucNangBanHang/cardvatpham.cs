@@ -14,6 +14,7 @@ namespace DBMS_Final_Project.view.ChucNangBanHang
     public partial class cardvatpham : UserControl
     {
         public EventHandler addHoaDon;
+        public EventHandler chitietvatpham;
         private int id;
         private decimal giaUudai;
         private string ten;
@@ -62,6 +63,14 @@ namespace DBMS_Final_Project.view.ChucNangBanHang
             if (addHoaDon != null)
             {
                 addHoaDon(this, e); 
+            }
+        }
+
+        private void btn_chi_tiet_Click(object sender, EventArgs e)
+        {
+            if (chitietvatpham != null)
+            {
+                chitietvatpham(this, e);
             }
         }
     }

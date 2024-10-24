@@ -90,10 +90,26 @@ namespace DBMS_Final_Project.view.ChucNangBanHang
 
                 cardvatpham cardvatpham = new cardvatpham(id, name, giagoc, giauudai, link);
                 cardvatpham.addHoaDon += AddHoaDon;
-
+                cardvatpham.chitietvatpham += ChiTietVatPham;
                 flp_vatpham.Controls.Add(cardvatpham);
             }
         }
+
+        private void ChiTietVatPham(object sender, EventArgs e)
+        {
+            cardvatpham cardvatpham = (cardvatpham)sender;
+            if (tb_types.SelectedIndex == 1)
+            {
+               chitietvatphamthucung chitietvatphamthucung = new chitietvatphamthucung(cardvatpham.Id, false);
+                chitietvatphamthucung.ShowDialog();
+            }
+            else
+            {
+                chitietvatphamthucung chitietvatphamthucung = new chitietvatphamthucung(cardvatpham.Id);
+                chitietvatphamthucung.ShowDialog();
+            }
+        }
+
         /// <summary>
         /// Nhập vào 1 datatable để hiển thị nó lên giao diện, nếu không nhập, mặc định lấy tất cả thú cưng từ CSDL
         /// </summary>
@@ -120,7 +136,7 @@ namespace DBMS_Final_Project.view.ChucNangBanHang
 
                 cardvatpham cardvatpham = new cardvatpham(id, name, giagoc, giauudai, link);
                 cardvatpham.addHoaDon += AddHoaDon;
-
+                cardvatpham.chitietvatpham += ChiTietVatPham;
                 flp_thu_cung.Controls.Add(cardvatpham);
             }
         }
@@ -424,11 +440,13 @@ namespace DBMS_Final_Project.view.ChucNangBanHang
             string sdt = "";
             string dtl = "";
             member_Detail.getValue(ref name, ref sdt, ref dtl);
-            string sqlcmd = "Insert into KhachHang(Ten, SDT, Diem_Tich_Luy) values ('" + name + "','" + sdt + "'," + dtl + ")";
-            instace.ExecuteQuery(sqlcmd);
+            string sqlcmd = "proc_ThemThanhVien";
+            string[] paramNames = { "@ten", "@sdt", "@dtl" };
+            object[] paramValues = {name, sdt, dtl};
+            instace.getResultFromProc(sqlcmd, paramValues, paramNames);
             khach_hang_Load();
         }
-
+        
         private void label1_Click(object sender, EventArgs e)
         {
 

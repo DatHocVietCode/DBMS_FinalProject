@@ -89,6 +89,7 @@
             this.btn_chi_tiet.TabIndex = 5;
             this.btn_chi_tiet.Text = "Chi Tiết";
             this.btn_chi_tiet.UseVisualStyleBackColor = true;
+            this.btn_chi_tiet.Click += new System.EventHandler(this.btn_chi_tiet_Click);
             // 
             // btn_them
             // 

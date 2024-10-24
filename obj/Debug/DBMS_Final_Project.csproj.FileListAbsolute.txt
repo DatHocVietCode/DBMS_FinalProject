@@ -40,3 +40,6 @@ D:\HK1_Nam3\DBMS\DBMS_FinalProject\obj\Debug\DBMS_Final_Project.view.ChucNangBan
 D:\HK1_Nam3\DBMS\DBMS_FinalProject\obj\Debug\DBMS_Final_Project.view.ChucNangBanHang.loc_khoang_gia.resources
 D:\HK1_Nam3\DBMS\DBMS_FinalProject\obj\Debug\DBMS_Final_Project.view.ChucNangBanHang.main_ban_hang.resources
 D:\HK1_Nam3\DBMS\DBMS_FinalProject\obj\Debug\DBMS_Final_Project.view.ChucNangBanHang.member_detail.resources
+D:\University\Năm 3\Kỳ 1\DBMS\Project\DBMS_Final_Project\obj\Debug\DBMS_Final_Project.view.ChucNangBanHang.chitietvatphamthucung.resources
+>>>>>>> b69186f60ab664f8e20ba1252fbd0c80e1704e12
+D:\HK1_Nam3\DBMS\DBMS_FinalProject\obj\Debug\DBMS_Final_Project.view.ChucNangBanHang.chitietvatphamthucung.resources
