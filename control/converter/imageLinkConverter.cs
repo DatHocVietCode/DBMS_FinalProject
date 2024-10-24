@@ -10,6 +10,11 @@ namespace DBMS_Final_Project.control.converter
 {
     public static class imageLinkConverter
     {
+        /// <summary>
+        /// Nhập vào đường dẫn tương đối, trả về đường dẫn tuyệt đối.
+        /// </summary>
+        /// <param name="path">Đường dẫn tương đối.</param>
+        /// <returns></returns>
         public static object Convert(string path)
         {
             try

@@ -100,6 +100,9 @@
     <Compile Include="view\signup.Designer.cs">
       <DependentUpon>signup.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -145,6 +148,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\images\chucnangbanhang\icon\Search_Icon.png" />
+    <Content Include="assets\images\dichvu\19\trong-giu-cho-meo_1612248539.jpg" />
+    <Content Include="assets\images\dichvu\20\cham-soc-thu-cung_1612248557.jpg" />
+    <Content Include="assets\images\dichvu\21\cuu-ho-thu-cung_1612248570.jpg" />
+    <Content Include="assets\images\dichvu\22\khach-san-cho-meo_1612242262.jpg" />
+    <Content Include="assets\images\dichvu\23\dich-vu-spa-cho-cho-meo_1612248623.jpg" />
+    <Content Include="assets\images\dichvu\24\tam-cho-cho-meo_1612248603.jpg" />
+    <Content Include="assets\images\dichvu\25\cat-tia-long-cho-meo_1612248645.jpg" />
+    <Content Include="assets\images\dichvu\26\thoi-trang-thu-cung_1612249248.jpg" />
     <Content Include="assets\images\thucung\10\z5625614256150_cc8dc907e1c6c2d3b2797b14f099e1f2.jpg" />
     <Content Include="assets\images\thucung\11\anh-cho-phu-quoc-9229297788.jpg" />
     <Content Include="assets\images\thucung\11\anh-cho-phu-quoc-9229298788.jpg" />
@@ -169,6 +180,21 @@
     <Content Include="assets\images\thucung\8\1773-2048x1365.jpg" />
     <Content Include="assets\images\thucung\9\anh-meo-ba-tu-292929.jpg" />
     <Content Include="assets\images\thucung\9\anh-meo-ba-tu-29292988977.jpg" />
+    <Content Include="assets\images\vatpham\13\ezgif-3-ba043b5167.jpg" />
+    <Content Include="assets\images\vatpham\14\Sua-cho-Esbilac-1.jpg" />
+    <Content Include="assets\images\vatpham\14\Sua-cho-Esbilac-2.jpg" />
+    <Content Include="assets\images\vatpham\15\60-sua-bot-DrKyan-cho-cho-110g-50k-1.jpg" />
+    <Content Include="assets\images\vatpham\15\60-sua-bot-DrKyan-cho-cho-110g-50k-2.jpg" />
+    <Content Include="assets\images\vatpham\15\60-sua-bot-DrKyan-cho-cho-110g-50k-3.jpg" />
+    <Content Include="assets\images\vatpham\15\60-sua-bot-DrKyan-cho-cho-110g-50k-4.jpg" />
+    <Content Include="assets\images\vatpham\16\16-luoc-chai-long-cho-meo-PetGrooming-tang-kem-luoc-nho-1.jpg" />
+    <Content Include="assets\images\vatpham\16\16-luoc-chai-long-cho-meo-PetGrooming-tang-kem-luoc-nho-2-2048x1536.jpg" />
+    <Content Include="assets\images\vatpham\17\3-xuong-gam-thit-ga-Taotaopet-100-gram-1.jpg" />
+    <Content Include="assets\images\vatpham\17\3-xuong-gam-thit-ga-Taotaopet-100-gram-2-2048x1536.jpg" />
+    <Content Include="assets\images\vatpham\18\Nuoc-hoa-freshy-luu-huong-7-ngay-160k-1.jpg" />
+    <Content Include="assets\images\vatpham\18\Nuoc-hoa-freshy-luu-huong-7-ngay-160k-2.jpg" />
+    <Content Include="assets\images\vatpham\18\Nuoc-hoa-freshy-luu-huong-7-ngay-160k-3.jpg" />
+    <Content Include="assets\images\vatpham\18\Nuoc-hoa-freshy-luu-huong-7-ngay-160k-4.jpg" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
