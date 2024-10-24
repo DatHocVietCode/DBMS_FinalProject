@@ -48,6 +48,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="control\converter\imageLinkConverter.cs" />
     <Compile Include="database\DataBase.cs" />
     <Compile Include="Form1.cs">
@@ -81,6 +82,17 @@
     </Compile>
     <Compile Include="view\ChucNangBanHang\member_detail.Designer.cs">
       <DependentUpon>member_detail.cs</DependentUpon>
+=======
+    <Compile Include="database\DataBase.cs" />
+    <Compile Include="objs\CaLam.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="view\AddNewSession.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\AddNewSession.Designer.cs">
+      <DependentUpon>AddNewSession.cs</DependentUpon>
+>>>>>>> c413fa3141a52373e59ef2aa43a7de150e50cc71
     </Compile>
     <Compile Include="view\DataGridViewTemplate\UC_DataGridView.cs">
       <SubType>UserControl</SubType>
@@ -94,15 +106,30 @@
     <Compile Include="view\login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\MainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\MainPage.Designer.cs">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\signup.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="view\signup.Designer.cs">
       <DependentUpon>signup.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+=======
+    <Compile Include="view\UC_Schedule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\UC_Schedule.Designer.cs">
+      <DependentUpon>UC_Schedule.cs</DependentUpon>
+    </Compile>
+>>>>>>> c413fa3141a52373e59ef2aa43a7de150e50cc71
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -112,6 +139,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <EmbeddedResource Include="view\ChucNangBanHang\cardvatpham.resx">
       <DependentUpon>cardvatpham.cs</DependentUpon>
     </EmbeddedResource>
@@ -123,6 +151,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\ChucNangBanHang\member_detail.resx">
       <DependentUpon>member_detail.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="view\AddNewSession.resx">
+      <DependentUpon>AddNewSession.cs</DependentUpon>
+>>>>>>> c413fa3141a52373e59ef2aa43a7de150e50cc71
     </EmbeddedResource>
     <EmbeddedResource Include="view\DataGridViewTemplate\UC_DataGridView.resx">
       <DependentUpon>UC_DataGridView.cs</DependentUpon>
@@ -130,8 +162,14 @@
     <EmbeddedResource Include="view\login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\MainPage.resx">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\signup.resx">
       <DependentUpon>signup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\UC_Schedule.resx">
+      <DependentUpon>UC_Schedule.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -146,6 +184,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+<<<<<<< HEAD
   <ItemGroup>
     <Content Include="assets\images\chucnangbanhang\icon\Search_Icon.png" />
     <Content Include="assets\images\dichvu\19\trong-giu-cho-meo_1612248539.jpg" />
@@ -196,6 +235,8 @@
     <Content Include="assets\images\vatpham\18\Nuoc-hoa-freshy-luu-huong-7-ngay-160k-3.jpg" />
     <Content Include="assets\images\vatpham\18\Nuoc-hoa-freshy-luu-huong-7-ngay-160k-4.jpg" />
   </ItemGroup>
+=======
+>>>>>>> c413fa3141a52373e59ef2aa43a7de150e50cc71
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

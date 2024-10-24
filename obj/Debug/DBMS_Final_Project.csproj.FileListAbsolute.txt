@@ -14,4 +14,24 @@ D:\University\Năm 3\Kỳ 1\DBMS\Project\DBMS_Final_Project\obj\Debug\DBMS_Final
 D:\University\Năm 3\Kỳ 1\DBMS\Project\DBMS_Final_Project\obj\Debug\DBMS_Final_Project.csproj.CoreCompileInputs.cache
 D:\University\Năm 3\Kỳ 1\DBMS\Project\DBMS_Final_Project\obj\Debug\DBMS_Final_Project.exe
 D:\University\Năm 3\Kỳ 1\DBMS\Project\DBMS_Final_Project\obj\Debug\DBMS_Final_Project.pdb
+<<<<<<< HEAD
 D:\University\Năm 3\Kỳ 1\DBMS\Project\DBMS_Final_Project\obj\Debug\DBMS_Final_Project.Form1.resources
+=======
+D:\University\Năm 3\Kỳ 1\DBMS\Project\DBMS_Final_Project\obj\Debug\DBMS_Final_Project.view.login.resources
+D:\University\Năm 3\Kỳ 1\DBMS\Project\DBMS_Final_Project\obj\Debug\DBMS_Final_Project.view.signup.resources
+D:\HK1_Nam3\DBMS\DBMS_FinalProject\bin\Debug\DBMS_Final_Project.exe.config
+D:\HK1_Nam3\DBMS\DBMS_FinalProject\bin\Debug\DBMS_Final_Project.exe
+D:\HK1_Nam3\DBMS\DBMS_FinalProject\bin\Debug\DBMS_Final_Project.pdb
+D:\HK1_Nam3\DBMS\DBMS_FinalProject\obj\Debug\DBMS_Final_Project.csproj.AssemblyReference.cache
+D:\HK1_Nam3\DBMS\DBMS_FinalProject\obj\Debug\DBMS_Final_Project.Properties.Resources.resources
+D:\HK1_Nam3\DBMS\DBMS_FinalProject\obj\Debug\DBMS_Final_Project.view.DataGridViewTemplate.UC_DataGridView.resources
+D:\HK1_Nam3\DBMS\DBMS_FinalProject\obj\Debug\DBMS_Final_Project.view.login.resources
+D:\HK1_Nam3\DBMS\DBMS_FinalProject\obj\Debug\DBMS_Final_Project.view.signup.resources
+D:\HK1_Nam3\DBMS\DBMS_FinalProject\obj\Debug\DBMS_Final_Project.view.UC_Schedule.resources
+D:\HK1_Nam3\DBMS\DBMS_FinalProject\obj\Debug\DBMS_Final_Project.csproj.GenerateResource.cache
+D:\HK1_Nam3\DBMS\DBMS_FinalProject\obj\Debug\DBMS_Final_Project.csproj.CoreCompileInputs.cache
+D:\HK1_Nam3\DBMS\DBMS_FinalProject\obj\Debug\DBMS_Final_Project.exe
+D:\HK1_Nam3\DBMS\DBMS_FinalProject\obj\Debug\DBMS_Final_Project.pdb
+D:\HK1_Nam3\DBMS\DBMS_FinalProject\obj\Debug\DBMS_Final_Project.view.MainPage.resources
+D:\HK1_Nam3\DBMS\DBMS_FinalProject\obj\Debug\DBMS_Final_Project.view.AddNewSession.resources
+>>>>>>> c413fa3141a52373e59ef2aa43a7de150e50cc71

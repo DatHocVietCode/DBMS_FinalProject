@@ -18,7 +18,11 @@ namespace DBMS_Final_Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
             Application.Run(new main_ban_hang());
+=======
+            Application.Run(new MainPage());
+>>>>>>> c413fa3141a52373e59ef2aa43a7de150e50cc71
         }
     }
 }

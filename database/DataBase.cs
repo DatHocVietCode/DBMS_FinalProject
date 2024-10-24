@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Data;
+<<<<<<< HEAD
 using System.Diagnostics.Eventing.Reader;
 
 namespace DBMS_Final_Project
@@ -103,6 +104,6 @@ namespace DBMS_Final_Project
                 return result;
             }
         }
-
+  
     }
 }

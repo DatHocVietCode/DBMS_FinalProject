@@ -3,52 +3,52 @@
   "WorkspaceRootPath": "D:\\University\\N\u0103m 3\\K\u1EF3 1\\DBMS\\Project\\DBMS_Final_Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A67F7912-F6AB-4B5C-8022-A48BA99617CA}|DBMS_Final_Project.csproj|D:\\University\\N\u0103m 3\\K\u1EF3 1\\DBMS\\Project\\DBMS_Final_Project\\view\\chucnangbanhang\\main_ban_hang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A67F7912-F6AB-4B5C-8022-A48BA99617CA}|DBMS_Final_Project.csproj|solutionrelative:view\\chucnangbanhang\\main_ban_hang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\University\\N\u0103m 3\\K\u1EF3 1\\DBMS\\Project\\DBMS_Final_Project\\view\\ChucNangBanHang\\main_ban_hang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:view\\ChucNangBanHang\\main_ban_hang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A67F7912-F6AB-4B5C-8022-A48BA99617CA}|DBMS_Final_Project.csproj|d:\\university\\n\u0103m 3\\k\u1EF3 1\\dbms\\project\\dbms_final_project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A67F7912-F6AB-4B5C-8022-A48BA99617CA}|DBMS_Final_Project.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\University\\N\u0103m 3\\K\u1EF3 1\\DBMS\\Project\\DBMS_Final_Project\\App.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:App.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A67F7912-F6AB-4B5C-8022-A48BA99617CA}|DBMS_Final_Project.csproj|d:\\university\\n\u0103m 3\\k\u1EF3 1\\dbms\\project\\dbms_final_project\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A67F7912-F6AB-4B5C-8022-A48BA99617CA}|DBMS_Final_Project.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\University\\N\u0103m 3\\K\u1EF3 1\\DBMS\\Project\\DBMS_Final_Project\\Form1.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Form1.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A67F7912-F6AB-4B5C-8022-A48BA99617CA}|DBMS_Final_Project.csproj|d:\\university\\n\u0103m 3\\k\u1EF3 1\\dbms\\project\\dbms_final_project\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{A67F7912-F6AB-4B5C-8022-A48BA99617CA}|DBMS_Final_Project.csproj|solutionrelative:app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\University\\N\u0103m 3\\K\u1EF3 1\\DBMS\\Project\\DBMS_Final_Project\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A67F7912-F6AB-4B5C-8022-A48BA99617CA}|DBMS_Final_Project.csproj|d:\\university\\n\u0103m 3\\k\u1EF3 1\\dbms\\project\\dbms_final_project\\view\\chucnangbanhang\\main_ban_hang.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A67F7912-F6AB-4B5C-8022-A48BA99617CA}|DBMS_Final_Project.csproj|solutionrelative:view\\chucnangbanhang\\main_ban_hang.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\University\\N\u0103m 3\\K\u1EF3 1\\DBMS\\Project\\DBMS_Final_Project\\view\\ChucNangBanHang\\main_ban_hang.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:view\\ChucNangBanHang\\main_ban_hang.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A67F7912-F6AB-4B5C-8022-A48BA99617CA}|DBMS_Final_Project.csproj|d:\\university\\n\u0103m 3\\k\u1EF3 1\\dbms\\project\\dbms_final_project\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A67F7912-F6AB-4B5C-8022-A48BA99617CA}|DBMS_Final_Project.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\University\\N\u0103m 3\\K\u1EF3 1\\DBMS\\Project\\DBMS_Final_Project\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A67F7912-F6AB-4B5C-8022-A48BA99617CA}|DBMS_Final_Project.csproj|D:\\University\\N\u0103m 3\\K\u1EF3 1\\DBMS\\Project\\DBMS_Final_Project\\view\\chucnangbanhang\\main_ban_hang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A67F7912-F6AB-4B5C-8022-A48BA99617CA}|DBMS_Final_Project.csproj|solutionrelative:view\\chucnangbanhang\\main_ban_hang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\University\\N\u0103m 3\\K\u1EF3 1\\DBMS\\Project\\DBMS_Final_Project\\view\\ChucNangBanHang\\cardvatpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:view\\ChucNangBanHang\\cardvatpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A67F7912-F6AB-4B5C-8022-A48BA99617CA}|DBMS_Final_Project.csproj|D:\\University\\N\u0103m 3\\K\u1EF3 1\\DBMS\\Project\\DBMS_Final_Project\\view\\chucnangbanhang\\loc_khoang_gia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A67F7912-F6AB-4B5C-8022-A48BA99617CA}|DBMS_Final_Project.csproj|solutionrelative:view\\chucnangbanhang\\loc_khoang_gia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\University\\N\u0103m 3\\K\u1EF3 1\\DBMS\\Project\\DBMS_Final_Project\\control\\converter\\imageLinkConverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:control\\converter\\imageLinkConverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A67F7912-F6AB-4B5C-8022-A48BA99617CA}|DBMS_Final_Project.csproj|d:\\university\\n\u0103m 3\\k\u1EF3 1\\dbms\\project\\dbms_final_project\\database\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A67F7912-F6AB-4B5C-8022-A48BA99617CA}|DBMS_Final_Project.csproj|solutionrelative:database\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\University\\N\u0103m 3\\K\u1EF3 1\\DBMS\\Project\\DBMS_Final_Project\\database\\DataBase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:database\\DataBase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A67F7912-F6AB-4B5C-8022-A48BA99617CA}|DBMS_Final_Project.csproj|d:\\university\\n\u0103m 3\\k\u1EF3 1\\dbms\\project\\dbms_final_project\\control\\converter\\imagelinkconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A67F7912-F6AB-4B5C-8022-A48BA99617CA}|DBMS_Final_Project.csproj|solutionrelative:control\\converter\\imagelinkconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\University\\N\u0103m 3\\K\u1EF3 1\\DBMS\\Project\\DBMS_Final_Project\\view\\ChucNangBanHang\\loc_khoang_gia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:view\\ChucNangBanHang\\loc_khoang_gia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A67F7912-F6AB-4B5C-8022-A48BA99617CA}|DBMS_Final_Project.csproj|d:\\university\\n\u0103m 3\\k\u1EF3 1\\dbms\\project\\dbms_final_project\\view\\chucnangbanhang\\cardvatpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A67F7912-F6AB-4B5C-8022-A48BA99617CA}|DBMS_Final_Project.csproj|solutionrelative:view\\chucnangbanhang\\cardvatpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\University\\N\u0103m 3\\K\u1EF3 1\\DBMS\\Project\\DBMS_Final_Project\\view\\ChucNangBanHang\\loc_khoang_gia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:view\\ChucNangBanHang\\loc_khoang_gia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A67F7912-F6AB-4B5C-8022-A48BA99617CA}|DBMS_Final_Project.csproj|d:\\university\\n\u0103m 3\\k\u1EF3 1\\dbms\\project\\dbms_final_project\\view\\chucnangbanhang\\loc_khoang_gia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A67F7912-F6AB-4B5C-8022-A48BA99617CA}|DBMS_Final_Project.csproj|solutionrelative:view\\chucnangbanhang\\loc_khoang_gia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\University\\N\u0103m 3\\K\u1EF3 1\\DBMS\\Project\\DBMS_Final_Project\\view\\ChucNangBanHang\\main_ban_hang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:view\\ChucNangBanHang\\main_ban_hang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -84,7 +84,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "App.config",
               "DocumentMoniker": "D:\\University\\N\u0103m 3\\K\u1EF3 1\\DBMS\\Project\\DBMS_Final_Project\\App.config",
               "RelativeDocumentMoniker": "App.config",
@@ -92,12 +92,11 @@
               "RelativeToolTip": "App.config",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-10-24T07:24:38.623Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-24T07:24:38.623Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "Form1.Designer.cs",
               "DocumentMoniker": "D:\\University\\N\u0103m 3\\K\u1EF3 1\\DBMS\\Project\\DBMS_Final_Project\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "Form1.Designer.cs",
@@ -105,12 +104,11 @@
               "RelativeToolTip": "Form1.Designer.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T07:24:22.529Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-24T07:24:22.529Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "D:\\University\\N\u0103m 3\\K\u1EF3 1\\DBMS\\Project\\DBMS_Final_Project\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
@@ -130,12 +128,11 @@
               "RelativeToolTip": "view\\ChucNangBanHang\\main_ban_hang.Designer.cs",
               "ViewState": "AQIAAGoCAAAAAAAAAADwv3gCAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T07:23:10.978Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-24T07:23:10.978Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\University\\N\u0103m 3\\K\u1EF3 1\\DBMS\\Project\\DBMS_Final_Project\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -143,12 +140,11 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAAAcAAAAAAAAAAAAswBQAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T07:01:17.719Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-24T07:01:17.719Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 6,
               "Title": "cardvatpham.cs [Design]",
               "DocumentMoniker": "D:\\University\\N\u0103m 3\\K\u1EF3 1\\DBMS\\Project\\DBMS_Final_Project\\view\\ChucNangBanHang\\cardvatpham.cs",
               "RelativeDocumentMoniker": "view\\ChucNangBanHang\\cardvatpham.cs",
@@ -160,7 +156,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 7,
               "Title": "imageLinkConverter.cs",
               "DocumentMoniker": "D:\\University\\N\u0103m 3\\K\u1EF3 1\\DBMS\\Project\\DBMS_Final_Project\\control\\converter\\imageLinkConverter.cs",
               "RelativeDocumentMoniker": "control\\converter\\imageLinkConverter.cs",
@@ -168,8 +164,7 @@
               "RelativeToolTip": "control\\converter\\imageLinkConverter.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAA8AAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T06:05:04.698Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-24T06:05:04.698Z"
             },
             {
               "$type": "Document",
@@ -181,12 +176,11 @@
               "RelativeToolTip": "database\\DataBase.cs",
               "ViewState": "AQIAADYAAAAAAAAAAAAQwE8AAABXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T06:03:33.474Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-24T06:03:33.474Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 9,
               "Title": "loc_khoang_gia.cs [Design]",
               "DocumentMoniker": "D:\\University\\N\u0103m 3\\K\u1EF3 1\\DBMS\\Project\\DBMS_Final_Project\\view\\ChucNangBanHang\\loc_khoang_gia.cs",
               "RelativeDocumentMoniker": "view\\ChucNangBanHang\\loc_khoang_gia.cs",
@@ -198,7 +192,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "loc_khoang_gia.cs",
               "DocumentMoniker": "D:\\University\\N\u0103m 3\\K\u1EF3 1\\DBMS\\Project\\DBMS_Final_Project\\view\\ChucNangBanHang\\loc_khoang_gia.cs",
               "RelativeDocumentMoniker": "view\\ChucNangBanHang\\loc_khoang_gia.cs",
@@ -206,12 +200,11 @@
               "RelativeToolTip": "view\\ChucNangBanHang\\loc_khoang_gia.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T09:42:33.47Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-23T09:42:33.47Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "main_ban_hang.cs [Design]",
               "DocumentMoniker": "D:\\University\\N\u0103m 3\\K\u1EF3 1\\DBMS\\Project\\DBMS_Final_Project\\view\\ChucNangBanHang\\main_ban_hang.cs",
               "RelativeDocumentMoniker": "view\\ChucNangBanHang\\main_ban_hang.cs",
