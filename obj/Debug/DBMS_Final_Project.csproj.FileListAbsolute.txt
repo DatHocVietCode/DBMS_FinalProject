@@ -36,3 +36,4 @@ D:\HK1_Nam3\DBMS\DBMS_FinalProject\obj\Debug\DBMS_Final_Project.view.AddNewSessi
 D:\University\Năm 3\Kỳ 1\DBMS\Project\DBMS_Final_Project\obj\Debug\DBMS_Final_Project.view.AddNewSession.resources
 D:\University\Năm 3\Kỳ 1\DBMS\Project\DBMS_Final_Project\obj\Debug\DBMS_Final_Project.view.MainPage.resources
 D:\University\Năm 3\Kỳ 1\DBMS\Project\DBMS_Final_Project\obj\Debug\DBMS_Final_Project.view.UC_Schedule.resources
+D:\University\Năm 3\Kỳ 1\DBMS\Project\DBMS_Final_Project\obj\Debug\DBMS_Final_Project.view.ChucNangBanHang.chitietvatphamthucung.resources

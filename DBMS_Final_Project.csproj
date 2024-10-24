@@ -58,6 +58,12 @@
     <Compile Include="view\ChucNangBanHang\cardvatpham.Designer.cs">
       <DependentUpon>cardvatpham.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\ChucNangBanHang\chitietvatphamthucung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\ChucNangBanHang\chitietvatphamthucung.Designer.cs">
+      <DependentUpon>chitietvatphamthucung.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\ChucNangBanHang\loc_khoang_gia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +130,9 @@
     </Compile>
     <EmbeddedResource Include="view\ChucNangBanHang\cardvatpham.resx">
       <DependentUpon>cardvatpham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\ChucNangBanHang\chitietvatphamthucung.resx">
+      <DependentUpon>chitietvatphamthucung.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\ChucNangBanHang\loc_khoang_gia.resx">
       <DependentUpon>loc_khoang_gia.cs</DependentUpon>
