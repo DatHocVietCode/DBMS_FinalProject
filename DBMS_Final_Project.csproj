@@ -46,14 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
+    <Compile Include="database\DataBase.cs" />
+    <Compile Include="objs\CaLam.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="view\AddNewSession.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\AddNewSession.Designer.cs">
+      <DependentUpon>AddNewSession.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\DataGridViewTemplate\UC_DataGridView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -66,11 +68,23 @@
     <Compile Include="view\login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\MainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\MainPage.Designer.cs">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\signup.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="view\signup.Designer.cs">
       <DependentUpon>signup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\UC_Schedule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\UC_Schedule.Designer.cs">
+      <DependentUpon>UC_Schedule.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -81,14 +95,23 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="view\AddNewSession.resx">
+      <DependentUpon>AddNewSession.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\DataGridViewTemplate\UC_DataGridView.resx">
       <DependentUpon>UC_DataGridView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\MainPage.resx">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\signup.resx">
       <DependentUpon>signup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\UC_Schedule.resx">
+      <DependentUpon>UC_Schedule.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -103,5 +126,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
