@@ -68,11 +68,11 @@
             this.cb_alphabet = new System.Windows.Forms.ComboBox();
             this.cb_gia = new System.Windows.Forms.ComboBox();
             this.tp_hoa_don = new System.Windows.Forms.TabPage();
-            this.btn_chinh_sua_hoadon = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.dtp = new System.Windows.Forms.DateTimePicker();
             this.tc_hoa_don = new System.Windows.Forms.TabControl();
             this.tp_chua_thanh_toan = new System.Windows.Forms.TabPage();
+            this.btn_chinh_sua_hoadon = new System.Windows.Forms.Button();
             this.gv_hoadon_chuathanhtoan = new System.Windows.Forms.DataGridView();
             this.tp_da_thanh_toan = new System.Windows.Forms.TabPage();
             this.gv_hoadon_dathanhtoan = new System.Windows.Forms.DataGridView();
@@ -82,6 +82,16 @@
             this.txt_tim_kiem_thanh_vien = new System.Windows.Forms.TextBox();
             this.btn_them_thanh_vien = new System.Windows.Forms.Button();
             this.imageList = new System.Windows.Forms.ImageList(this.components);
+            this.tp_phong_dich_vu = new System.Windows.Forms.TabPage();
+            this.gv_phong_dich_vu = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cb_trang_thai = new System.Windows.Forms.ComboBox();
+            this.lbl_ten_dich_vu = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_ma_dv = new System.Windows.Forms.Label();
+            this.lbl_ma_phong_dv = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.tc_ban_hang.SuspendLayout();
             this.tp_spdv.SuspendLayout();
             this.panel_tao_hoadon_moi.SuspendLayout();
@@ -97,6 +107,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gv_hoadon_dathanhtoan)).BeginInit();
             this.tp_thanh_vien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gv_thanh_vien)).BeginInit();
+            this.tp_phong_dich_vu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gv_phong_dich_vu)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_title
@@ -364,6 +376,7 @@
             this.tb_types.Controls.Add(this.tp_thu_cung);
             this.tb_types.Controls.Add(this.tp_vat_pham);
             this.tb_types.Controls.Add(this.tp_dich_vu);
+            this.tb_types.Controls.Add(this.tp_phong_dich_vu);
             this.tb_types.Location = new System.Drawing.Point(0, 70);
             this.tb_types.Name = "tb_types";
             this.tb_types.SelectedIndex = 0;
@@ -486,16 +499,6 @@
             this.tp_hoa_don.UseVisualStyleBackColor = true;
             this.tp_hoa_don.Click += new System.EventHandler(this.tp_hoa_don_Click);
             // 
-            // btn_chinh_sua_hoadon
-            // 
-            this.btn_chinh_sua_hoadon.Location = new System.Drawing.Point(981, 210);
-            this.btn_chinh_sua_hoadon.Name = "btn_chinh_sua_hoadon";
-            this.btn_chinh_sua_hoadon.Size = new System.Drawing.Size(97, 40);
-            this.btn_chinh_sua_hoadon.TabIndex = 8;
-            this.btn_chinh_sua_hoadon.Text = "Chỉnh sửa";
-            this.btn_chinh_sua_hoadon.UseVisualStyleBackColor = true;
-            this.btn_chinh_sua_hoadon.Click += new System.EventHandler(this.btn_chinh_sua_hoadon_Click);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -537,6 +540,16 @@
             this.tp_chua_thanh_toan.TabIndex = 0;
             this.tp_chua_thanh_toan.Text = "Chưa thanh toán";
             this.tp_chua_thanh_toan.UseVisualStyleBackColor = true;
+            // 
+            // btn_chinh_sua_hoadon
+            // 
+            this.btn_chinh_sua_hoadon.Location = new System.Drawing.Point(981, 210);
+            this.btn_chinh_sua_hoadon.Name = "btn_chinh_sua_hoadon";
+            this.btn_chinh_sua_hoadon.Size = new System.Drawing.Size(97, 40);
+            this.btn_chinh_sua_hoadon.TabIndex = 8;
+            this.btn_chinh_sua_hoadon.Text = "Chỉnh sửa";
+            this.btn_chinh_sua_hoadon.UseVisualStyleBackColor = true;
+            this.btn_chinh_sua_hoadon.Click += new System.EventHandler(this.btn_chinh_sua_hoadon_Click);
             // 
             // gv_hoadon_chuathanhtoan
             // 
@@ -627,6 +640,105 @@
             this.imageList.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList.Images.SetKeyName(0, "Search_Icon.png");
             // 
+            // tp_phong_dich_vu
+            // 
+            this.tp_phong_dich_vu.Controls.Add(this.lbl_ma_phong_dv);
+            this.tp_phong_dich_vu.Controls.Add(this.label10);
+            this.tp_phong_dich_vu.Controls.Add(this.lbl_ten_dich_vu);
+            this.tp_phong_dich_vu.Controls.Add(this.lbl_ma_dv);
+            this.tp_phong_dich_vu.Controls.Add(this.cb_trang_thai);
+            this.tp_phong_dich_vu.Controls.Add(this.label8);
+            this.tp_phong_dich_vu.Controls.Add(this.label3);
+            this.tp_phong_dich_vu.Controls.Add(this.label1);
+            this.tp_phong_dich_vu.Controls.Add(this.gv_phong_dich_vu);
+            this.tp_phong_dich_vu.Location = new System.Drawing.Point(4, 25);
+            this.tp_phong_dich_vu.Name = "tp_phong_dich_vu";
+            this.tp_phong_dich_vu.Size = new System.Drawing.Size(720, 455);
+            this.tp_phong_dich_vu.TabIndex = 3;
+            this.tp_phong_dich_vu.Text = "Phòng dịch vụ";
+            this.tp_phong_dich_vu.UseVisualStyleBackColor = true;
+            // 
+            // gv_phong_dich_vu
+            // 
+            this.gv_phong_dich_vu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gv_phong_dich_vu.Location = new System.Drawing.Point(2, 0);
+            this.gv_phong_dich_vu.Name = "gv_phong_dich_vu";
+            this.gv_phong_dich_vu.RowHeadersWidth = 51;
+            this.gv_phong_dich_vu.RowTemplate.Height = 24;
+            this.gv_phong_dich_vu.Size = new System.Drawing.Size(426, 452);
+            this.gv_phong_dich_vu.TabIndex = 0;
+            this.gv_phong_dich_vu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gv_phong_dich_vu_CellContentClick);
+            this.gv_phong_dich_vu.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.gv_phong_dich_vu_CellMouseClick);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(452, 229);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(79, 16);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Tên dịch vụ:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(461, 273);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(70, 16);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "Trạng thái:";
+            // 
+            // cb_trang_thai
+            // 
+            this.cb_trang_thai.FormattingEnabled = true;
+            this.cb_trang_thai.Items.AddRange(new object[] {
+            "Sẵn sàng",
+            "Chưa sẵn sàng"});
+            this.cb_trang_thai.Location = new System.Drawing.Point(552, 270);
+            this.cb_trang_thai.Name = "cb_trang_thai";
+            this.cb_trang_thai.Size = new System.Drawing.Size(121, 24);
+            this.cb_trang_thai.TabIndex = 4;
+            this.cb_trang_thai.SelectedIndexChanged += new System.EventHandler(this.cb_trang_thai_SelectedIndexChanged);
+            // 
+            // lbl_ten_dich_vu
+            // 
+            this.lbl_ten_dich_vu.Location = new System.Drawing.Point(549, 229);
+            this.lbl_ten_dich_vu.Name = "lbl_ten_dich_vu";
+            this.lbl_ten_dich_vu.Size = new System.Drawing.Size(156, 26);
+            this.lbl_ten_dich_vu.TabIndex = 6;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(457, 184);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 16);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Mã dịch vụ:";
+            // 
+            // lbl_ma_dv
+            // 
+            this.lbl_ma_dv.Location = new System.Drawing.Point(549, 184);
+            this.lbl_ma_dv.Name = "lbl_ma_dv";
+            this.lbl_ma_dv.Size = new System.Drawing.Size(156, 26);
+            this.lbl_ma_dv.TabIndex = 5;
+            // 
+            // lbl_ma_phong_dv
+            // 
+            this.lbl_ma_phong_dv.Location = new System.Drawing.Point(549, 141);
+            this.lbl_ma_phong_dv.Name = "lbl_ma_phong_dv";
+            this.lbl_ma_phong_dv.Size = new System.Drawing.Size(156, 26);
+            this.lbl_ma_phong_dv.TabIndex = 8;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(431, 151);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(115, 16);
+            this.label10.TabIndex = 7;
+            this.label10.Text = "Mã phòng dịch vụ:";
+            // 
             // main_ban_hang
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -655,6 +767,9 @@
             this.tp_thanh_vien.ResumeLayout(false);
             this.tp_thanh_vien.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gv_thanh_vien)).EndInit();
+            this.tp_phong_dich_vu.ResumeLayout(false);
+            this.tp_phong_dich_vu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gv_phong_dich_vu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -714,5 +829,15 @@
         private System.Windows.Forms.Button btn_chinh_sua_hoadon;
         private System.Windows.Forms.FlowLayoutPanel flp_vatpham;
         private System.Windows.Forms.FlowLayoutPanel flp_dichvu;
+        private System.Windows.Forms.TabPage tp_phong_dich_vu;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridView gv_phong_dich_vu;
+        private System.Windows.Forms.Label lbl_ten_dich_vu;
+        private System.Windows.Forms.ComboBox cb_trang_thai;
+        private System.Windows.Forms.Label lbl_ma_phong_dv;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lbl_ma_dv;
+        private System.Windows.Forms.Label label1;
     }
 }

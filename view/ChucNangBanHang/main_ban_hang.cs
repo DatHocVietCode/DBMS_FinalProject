@@ -66,6 +66,14 @@ namespace DBMS_Final_Project.view.ChucNangBanHang
             thu_cung_load();
             vat_pham_load();
             dich_vu_Load();
+            phong_dich_vu_load();
+        }
+
+        private void phong_dich_vu_load()
+        {
+            string sqlcmd = "select * from DanhSachPhongDichVu";
+            DataTable dt = (DataTable)instace.ExecuteQuery(sqlcmd);
+            gv_phong_dich_vu.DataSource = dt;
         }
 
         private void vat_pham_load(DataTable vatpham = null)
@@ -145,7 +153,7 @@ namespace DBMS_Final_Project.view.ChucNangBanHang
         {
             if (dichvu == null)
             {
-                dt_dichvu = instace.ExecuteQuery("SELECT * FROM DanhSachDichVu");
+                dt_dichvu = instace.ExecuteQuery("SELECT * FROM DanhSachDichVuSanSang");
             }
             else
             {
@@ -619,6 +627,56 @@ namespace DBMS_Final_Project.view.ChucNangBanHang
         private void tp_hoa_don_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void gv_phong_dich_vu_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {/*
+            DataRow dataRow = sender as DataRow;
+            lbl_ma_dv.Text = dataRow["Ma_Dich_Vu"].ToString();
+            lbl_ten_dich_vu.Text = dataRow["Ten_Dich_Vu"].ToString();*/
+        }
+
+        private void gv_phong_dich_vu_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            // Kiểm tra nếu chỉ số hàng hợp lệ (tránh click vào tiêu đề)
+            if (e.RowIndex >= 0)
+            {
+                // Lấy hàng được click từ DataGridView
+                DataGridViewRow row = gv_phong_dich_vu.Rows[e.RowIndex];
+
+                // Gán giá trị cho các nhãn từ các ô trong dòng
+                lbl_ma_dv.Text = row.Cells["Ma_Dich_Vu"].Value.ToString();
+                lbl_ten_dich_vu.Text = row.Cells["Ten_Dich_Vu"].Value.ToString();
+                lbl_ma_phong_dv.Text = row.Cells["Ma_Phong"].Value.ToString();
+                cb_trang_thai.SelectedIndexChanged -= cb_trang_thai_SelectedIndexChanged;
+                if (row.Cells["Trang_Thai"].Value.ToString() == "Sẵn sàng")
+                    cb_trang_thai.SelectedIndex = 0;
+                else
+                    cb_trang_thai.SelectedIndex = 1;
+                cb_trang_thai.SelectedIndexChanged += cb_trang_thai_SelectedIndexChanged;
+
+            }
+        }
+
+        private void cb_trang_thai_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            string trangthai = "";
+            if (cb_trang_thai.SelectedIndex == 0)
+            {
+                trangthai = "Sẵn sàng";
+            }
+            else
+            {
+                trangthai = "Chưa sẵn sàng";
+            }
+            string idphong = lbl_ma_phong_dv.Text;
+            string sqlcmd = "CapNhatTrangThaiPhongDichVu";
+            string[] paramNames = { "@idphongdv", "@trangthai" };
+            object[] paramValues = { idphong, trangthai };
+            instace.getResultFromProc(sqlcmd, paramValues, paramNames);
+            phong_dich_vu_load();
+            dich_vu_Load();
         }
     }
 }

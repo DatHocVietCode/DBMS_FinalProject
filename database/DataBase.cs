@@ -100,8 +100,18 @@ namespace DBMS_Final_Project
                     }
                    
                 }
-                object result = sqlCommand.ExecuteScalar();
-                return result;
+
+                try
+                {
+                    object result = sqlCommand.ExecuteScalar();
+                    return result;
+                }
+                catch (Exception e)
+                {
+
+                    MessageBox.Show(e.Message);
+                }
+                return null;
             }
         }
   
