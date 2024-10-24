@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 namespace DBMS_Final_Project.view.ChucNangBanHang
 {
-    public partial class main_ban_hang : Form
+    public partial class main_ban_hang : UserControl
     {
         Database instace = new Database();
         DataTable dt_thucung = new DataTable();
@@ -313,7 +313,7 @@ namespace DBMS_Final_Project.view.ChucNangBanHang
         }
         private void btn_huy_bo_Click(object sender, EventArgs e)
         {
-            string sqlcmd = "proc_XoaHoaDon";
+            string sqlcmd = "proc_XoaHoaDonDangLap";
             object[] paramValues = { IDHoaDonHienTai.ToString()};
             string[] paramNames = { "@id_hoadon" };
             instace.getResultFromProc(sqlcmd, paramValues, paramNames);
@@ -420,6 +420,13 @@ namespace DBMS_Final_Project.view.ChucNangBanHang
             string title = header + " thông tin thành viên";
             member_detail member_Detail = new member_detail(title);
             member_Detail.ShowDialog();
+            string name = "";
+            string sdt = "";
+            string dtl = "";
+            member_Detail.getValue(ref name, ref sdt, ref dtl);
+            string sqlcmd = "Insert into KhachHang(Ten, SDT, Diem_Tich_Luy) values ('" + name + "','" + sdt + "'," + dtl + ")";
+            instace.ExecuteQuery(sqlcmd);
+            khach_hang_Load();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -544,6 +551,56 @@ namespace DBMS_Final_Project.view.ChucNangBanHang
                 }
             }
             setTongTien(LayTongTienHoaDonHienTai());
+        }
+
+        private void btn_chinh_sua_hoadon_Click(object sender, EventArgs e)
+        {
+            if (tc_hoa_don.SelectedIndex == 1)
+                return;
+            DataGridViewRow hoadonhientai = gv_hoadon_chuathanhtoan.CurrentRow;
+            if (hoadonhientai != null)
+            {
+                IDHoaDonHienTai = Convert.ToInt32(hoadonhientai.Cells[0].Value);
+
+
+                string query = "SELECT * FROM dbo.XemChiTietHoaDon("+IDHoaDonHienTai.ToString()+")";
+             
+                DataTable chitiethoadon = (DataTable)instace.ExecuteQuery(query);
+                CapNhatGiaoDienHoaDonCanChinhSua(chitiethoadon);
+            }
+        }
+        /// <summary>
+        /// Input datatable của hóa đơn cần chỉnh sửa để update lên giao diện
+        /// </summary>
+        /// <param name="dt"></param>
+        private void CapNhatGiaoDienHoaDonCanChinhSua(DataTable dt)
+        {
+            lv_hoa_don.Items.Clear();
+            foreach (DataRow row  in dt.Rows)
+            {
+                string idVatpham = row["Ma_SPDV"].ToString();
+                string ten = row["Ten"].ToString();
+                string soluong = row["So_Luong"].ToString();
+                string dongia = Convert.ToDecimal(row["Gia_Khuyen_Mai"]).ToString("#,0");
+                string thanhtien = Convert.ToDecimal(row["Thanh_Tien"]).ToString("#,0");
+                string[] lvItem = {idVatpham, ten, soluong, dongia, thanhtien};
+                lv_hoa_don.Items.Add(new ListViewItem(lvItem));
+            }
+            txt_id_khachhang.Text = dt.Rows[0]["Ma_Khach_Hang"].ToString();
+            if (txt_id_khachhang.Text.Length == 0)
+                txt_id_khachhang.Text = "0";
+            btn_xac_nhan_id_khachhang_Click_1(null, null);  
+            tc_ban_hang.SelectedIndex = 0;
+        }
+
+        private void dtp_ValueChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void tp_hoa_don_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

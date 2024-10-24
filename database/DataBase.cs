@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Data;
-<<<<<<< HEAD
+
 using System.Diagnostics.Eventing.Reader;
 
 namespace DBMS_Final_Project
 {
     public class Database
     {
-        private string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=PetShop;Integrated Security=True";
+        public static string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=PetShop;Integrated Security=True";
         private SqlConnection conn;
         public Database()
         {

@@ -32,9 +32,9 @@
             this.lbl_ten = new System.Windows.Forms.Label();
             this.lbl_sdt = new System.Windows.Forms.Label();
             this.lbl_diem_tich_luy = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txt_name = new System.Windows.Forms.TextBox();
+            this.txt_sdt = new System.Windows.Forms.TextBox();
+            this.txt_dtl = new System.Windows.Forms.TextBox();
             this.btn_xac_nhan = new System.Windows.Forms.Button();
             this.btn_huy_bo = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -75,26 +75,26 @@
             this.lbl_diem_tich_luy.TabIndex = 3;
             this.lbl_diem_tich_luy.Text = "Điểm tích lũy";
             // 
-            // textBox1
+            // txt_name
             // 
-            this.textBox1.Location = new System.Drawing.Point(29, 101);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(382, 22);
-            this.textBox1.TabIndex = 4;
+            this.txt_name.Location = new System.Drawing.Point(29, 101);
+            this.txt_name.Name = "txt_name";
+            this.txt_name.Size = new System.Drawing.Size(382, 22);
+            this.txt_name.TabIndex = 4;
             // 
-            // textBox2
+            // txt_sdt
             // 
-            this.textBox2.Location = new System.Drawing.Point(29, 178);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(382, 22);
-            this.textBox2.TabIndex = 5;
+            this.txt_sdt.Location = new System.Drawing.Point(29, 178);
+            this.txt_sdt.Name = "txt_sdt";
+            this.txt_sdt.Size = new System.Drawing.Size(382, 22);
+            this.txt_sdt.TabIndex = 5;
             // 
-            // textBox3
+            // txt_dtl
             // 
-            this.textBox3.Location = new System.Drawing.Point(29, 257);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(382, 22);
-            this.textBox3.TabIndex = 6;
+            this.txt_dtl.Location = new System.Drawing.Point(29, 257);
+            this.txt_dtl.Name = "txt_dtl";
+            this.txt_dtl.Size = new System.Drawing.Size(382, 22);
+            this.txt_dtl.TabIndex = 6;
             // 
             // btn_xac_nhan
             // 
@@ -104,6 +104,7 @@
             this.btn_xac_nhan.TabIndex = 7;
             this.btn_xac_nhan.Text = "Xác nhận";
             this.btn_xac_nhan.UseVisualStyleBackColor = true;
+            this.btn_xac_nhan.Click += new System.EventHandler(this.btn_xac_nhan_Click);
             // 
             // btn_huy_bo
             // 
@@ -113,6 +114,7 @@
             this.btn_huy_bo.TabIndex = 8;
             this.btn_huy_bo.Text = "Hủy bỏ";
             this.btn_huy_bo.UseVisualStyleBackColor = true;
+            this.btn_huy_bo.Click += new System.EventHandler(this.btn_huy_bo_Click);
             // 
             // member_detail
             // 
@@ -121,9 +123,9 @@
             this.ClientSize = new System.Drawing.Size(448, 388);
             this.Controls.Add(this.btn_huy_bo);
             this.Controls.Add(this.btn_xac_nhan);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_dtl);
+            this.Controls.Add(this.txt_sdt);
+            this.Controls.Add(this.txt_name);
             this.Controls.Add(this.lbl_diem_tich_luy);
             this.Controls.Add(this.lbl_sdt);
             this.Controls.Add(this.lbl_ten);
@@ -143,9 +145,9 @@
         private System.Windows.Forms.Label lbl_ten;
         private System.Windows.Forms.Label lbl_sdt;
         private System.Windows.Forms.Label lbl_diem_tich_luy;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_name;
+        private System.Windows.Forms.TextBox txt_sdt;
+        private System.Windows.Forms.TextBox txt_dtl;
         private System.Windows.Forms.Button btn_xac_nhan;
         private System.Windows.Forms.Button btn_huy_bo;
     }

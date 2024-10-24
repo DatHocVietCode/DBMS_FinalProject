@@ -62,12 +62,13 @@
             this.tp_vat_pham = new System.Windows.Forms.TabPage();
             this.flp_vatpham = new System.Windows.Forms.FlowLayoutPanel();
             this.tp_dich_vu = new System.Windows.Forms.TabPage();
+            this.flp_dichvu = new System.Windows.Forms.FlowLayoutPanel();
             this.btn_tim_kiem = new System.Windows.Forms.Button();
             this.txt_tim_kiem = new System.Windows.Forms.TextBox();
             this.cb_alphabet = new System.Windows.Forms.ComboBox();
             this.cb_gia = new System.Windows.Forms.ComboBox();
             this.tp_hoa_don = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_chinh_sua_hoadon = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.dtp = new System.Windows.Forms.DateTimePicker();
             this.tc_hoa_don = new System.Windows.Forms.TabControl();
@@ -81,7 +82,6 @@
             this.txt_tim_kiem_thanh_vien = new System.Windows.Forms.TextBox();
             this.btn_them_thanh_vien = new System.Windows.Forms.Button();
             this.imageList = new System.Windows.Forms.ImageList(this.components);
-            this.flp_dichvu = new System.Windows.Forms.FlowLayoutPanel();
             this.tc_ban_hang.SuspendLayout();
             this.tp_spdv.SuspendLayout();
             this.panel_tao_hoadon_moi.SuspendLayout();
@@ -419,6 +419,14 @@
             this.tp_dich_vu.Text = "Dịch vụ";
             this.tp_dich_vu.UseVisualStyleBackColor = true;
             // 
+            // flp_dichvu
+            // 
+            this.flp_dichvu.AutoScroll = true;
+            this.flp_dichvu.Location = new System.Drawing.Point(-1, 0);
+            this.flp_dichvu.Name = "flp_dichvu";
+            this.flp_dichvu.Size = new System.Drawing.Size(721, 457);
+            this.flp_dichvu.TabIndex = 0;
+            // 
             // btn_tim_kiem
             // 
             this.btn_tim_kiem.Location = new System.Drawing.Point(781, 19);
@@ -466,7 +474,6 @@
             // 
             // tp_hoa_don
             // 
-            this.tp_hoa_don.Controls.Add(this.button1);
             this.tp_hoa_don.Controls.Add(this.label2);
             this.tp_hoa_don.Controls.Add(this.dtp);
             this.tp_hoa_don.Controls.Add(this.tc_hoa_don);
@@ -477,15 +484,17 @@
             this.tp_hoa_don.TabIndex = 1;
             this.tp_hoa_don.Text = "Hóa đơn";
             this.tp_hoa_don.UseVisualStyleBackColor = true;
+            this.tp_hoa_don.Click += new System.EventHandler(this.tp_hoa_don_Click);
             // 
-            // button1
+            // btn_chinh_sua_hoadon
             // 
-            this.button1.Location = new System.Drawing.Point(1018, 22);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 40);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Chỉnh sửa";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_chinh_sua_hoadon.Location = new System.Drawing.Point(981, 210);
+            this.btn_chinh_sua_hoadon.Name = "btn_chinh_sua_hoadon";
+            this.btn_chinh_sua_hoadon.Size = new System.Drawing.Size(97, 40);
+            this.btn_chinh_sua_hoadon.TabIndex = 8;
+            this.btn_chinh_sua_hoadon.Text = "Chỉnh sửa";
+            this.btn_chinh_sua_hoadon.UseVisualStyleBackColor = true;
+            this.btn_chinh_sua_hoadon.Click += new System.EventHandler(this.btn_chinh_sua_hoadon_Click);
             // 
             // label2
             // 
@@ -495,6 +504,7 @@
             this.label2.Size = new System.Drawing.Size(123, 16);
             this.label2.TabIndex = 7;
             this.label2.Text = "Chọn ngày xác định";
+            this.label2.Visible = false;
             // 
             // dtp
             // 
@@ -502,6 +512,8 @@
             this.dtp.Name = "dtp";
             this.dtp.Size = new System.Drawing.Size(271, 22);
             this.dtp.TabIndex = 3;
+            this.dtp.Visible = false;
+            this.dtp.ValueChanged += new System.EventHandler(this.dtp_ValueChanged);
             // 
             // tc_hoa_don
             // 
@@ -516,6 +528,7 @@
             // 
             // tp_chua_thanh_toan
             // 
+            this.tp_chua_thanh_toan.Controls.Add(this.btn_chinh_sua_hoadon);
             this.tp_chua_thanh_toan.Controls.Add(this.gv_hoadon_chuathanhtoan);
             this.tp_chua_thanh_toan.Location = new System.Drawing.Point(4, 25);
             this.tp_chua_thanh_toan.Name = "tp_chua_thanh_toan";
@@ -532,7 +545,7 @@
             this.gv_hoadon_chuathanhtoan.Name = "gv_hoadon_chuathanhtoan";
             this.gv_hoadon_chuathanhtoan.RowHeadersWidth = 51;
             this.gv_hoadon_chuathanhtoan.RowTemplate.Height = 24;
-            this.gv_hoadon_chuathanhtoan.Size = new System.Drawing.Size(1127, 470);
+            this.gv_hoadon_chuathanhtoan.Size = new System.Drawing.Size(941, 470);
             this.gv_hoadon_chuathanhtoan.TabIndex = 0;
             // 
             // tp_da_thanh_toan
@@ -614,24 +627,14 @@
             this.imageList.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList.Images.SetKeyName(0, "Search_Icon.png");
             // 
-            // flp_dichvu
-            // 
-            this.flp_dichvu.AutoScroll = true;
-            this.flp_dichvu.Location = new System.Drawing.Point(-1, 0);
-            this.flp_dichvu.Name = "flp_dichvu";
-            this.flp_dichvu.Size = new System.Drawing.Size(721, 457);
-            this.flp_dichvu.TabIndex = 0;
-            // 
             // main_ban_hang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1155, 629);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.tc_ban_hang);
             this.Controls.Add(this.lbl_title);
             this.Name = "main_ban_hang";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "main_ban_hang";
+            this.Size = new System.Drawing.Size(1140, 807);
             this.Load += new System.EventHandler(this.main_ban_hang_Load);
             this.tc_ban_hang.ResumeLayout(false);
             this.tp_spdv.ResumeLayout(false);
@@ -708,7 +711,7 @@
         private System.Windows.Forms.Button btn_huy_bo;
         private System.Windows.Forms.ListView lv_hoa_don;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_chinh_sua_hoadon;
         private System.Windows.Forms.FlowLayoutPanel flp_vatpham;
         private System.Windows.Forms.FlowLayoutPanel flp_dichvu;
     }

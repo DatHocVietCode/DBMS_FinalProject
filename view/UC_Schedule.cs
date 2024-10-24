@@ -1,4 +1,4 @@
-﻿using DBMS_Final_Project.databse;
+﻿using DBMS_Final_Project;
 using DBMS_Final_Project.objs;
 using System;
 using System.Collections.Generic;
@@ -38,7 +38,7 @@ namespace DBMS_Final_Project.view
 
         public void Load()
         {
-            
+
             DateTime date = DateTime.Now.Date;
             DateTime startDate = date.AddDays(-((int)date.DayOfWeek));
             List<CaLam> caLamList = new List<CaLam>();
@@ -87,12 +87,12 @@ namespace DBMS_Final_Project.view
 
                 for (int i = 0; i < 3; i++)
                 {
-                    for (int j = 0; j< 7; j++)
+                    for (int j = 0; j < 7; j++)
                     {
                         string strFlp = "flp" + i.ToString() + j.ToString();
                         FlowLayoutPanel flp = (FlowLayoutPanel)this.Controls.Find(strFlp, true).First();
                         flp.Controls.Clear();
-                    }    
+                    }
                 }
 
 
