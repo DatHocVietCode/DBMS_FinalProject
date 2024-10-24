@@ -17,6 +17,7 @@ namespace DBMS_Final_Project.view
     public partial class UC_Schedule : UserControl
     {
         string conn = Database.connectionString;
+        DateTime startDate = DateTime.Now.Date;
         public UC_Schedule()
         {
             InitializeComponent();
@@ -38,9 +39,17 @@ namespace DBMS_Final_Project.view
 
         public void Load()
         {
-            
-            DateTime date = DateTime.Now.Date;
-            DateTime startDate = date.AddDays(-((int)date.DayOfWeek));
+            startDate = startDate.AddDays(-((int)startDate.DayOfWeek));
+            Run();
+        }
+        public void Run()
+        {
+            lbl_Thang.Text = startDate.Month.ToString() + "/" + startDate.Year.ToString();
+            for (int i = 0; i < 7; i++)
+            {
+                Label lbl = (Label) this.Controls.Find("lbl" + i.ToString(), true).First();
+                lbl.Text = (startDate.AddDays(i)).DayOfWeek.ToString() + " - "+ (startDate.AddDays(i)).Day.ToString();
+            }
             List<CaLam> caLamList = new List<CaLam>();
 
             using (SqlConnection connection = new SqlConnection(conn))
@@ -163,6 +172,18 @@ namespace DBMS_Final_Project.view
                 Load();
 
             }
+        }
+
+        private void btn_pre_Click(object sender, EventArgs e)
+        {
+            startDate = startDate.AddDays(-7);
+            Run();
+        }
+
+        private void btn_next_Click(object sender, EventArgs e)
+        {
+            startDate = startDate.AddDays(7);
+            Run();
         }
     }
 }
