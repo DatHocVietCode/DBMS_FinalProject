@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,6 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="control\converter\imageLinkConverter.cs" />
+    <Compile Include="database\Database.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +62,12 @@
     </Compile>
     <Compile Include="view\DataGridViewTemplate\UC_DataGridView.Designer.cs">
       <DependentUpon>UC_DataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Fmanager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Fmanager.Designer.cs">
+      <DependentUpon>Fmanager.cs</DependentUpon>
     </Compile>
     <Compile Include="view\login.cs">
       <SubType>Form</SubType>
@@ -84,6 +93,9 @@
     <EmbeddedResource Include="view\DataGridViewTemplate\UC_DataGridView.resx">
       <DependentUpon>UC_DataGridView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\Fmanager.resx">
+      <DependentUpon>Fmanager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,6 +114,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="assets\images\dichvu\" />
+    <Folder Include="assets\images\thucung\1\" />
+    <Folder Include="assets\images\vatpham\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

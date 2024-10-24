@@ -9,3 +9,16 @@ D:\University\Năm 3\Kỳ 1\DBMS\Project\DBMS_Final_Project\obj\Debug\DBMS_Final
 D:\University\Năm 3\Kỳ 1\DBMS\Project\DBMS_Final_Project\obj\Debug\DBMS_Final_Project.pdb
 D:\University\Năm 3\Kỳ 1\DBMS\Project\DBMS_Final_Project\obj\Debug\DBMS_Final_Project.view.login.resources
 D:\University\Năm 3\Kỳ 1\DBMS\Project\DBMS_Final_Project\obj\Debug\DBMS_Final_Project.view.signup.resources
+D:\HQTCSDL\PetShop\DBMS_FinalProject\obj\Debug\DBMS_Final_Project.csproj.AssemblyReference.cache
+D:\HQTCSDL\PetShop\DBMS_FinalProject\obj\Debug\DBMS_Final_Project.Properties.Resources.resources
+D:\HQTCSDL\PetShop\DBMS_FinalProject\obj\Debug\DBMS_Final_Project.view.DataGridViewTemplate.UC_DataGridView.resources
+D:\HQTCSDL\PetShop\DBMS_FinalProject\obj\Debug\DBMS_Final_Project.view.Fmanager.resources
+D:\HQTCSDL\PetShop\DBMS_FinalProject\obj\Debug\DBMS_Final_Project.view.login.resources
+D:\HQTCSDL\PetShop\DBMS_FinalProject\obj\Debug\DBMS_Final_Project.view.signup.resources
+D:\HQTCSDL\PetShop\DBMS_FinalProject\obj\Debug\DBMS_Final_Project.csproj.GenerateResource.cache
+D:\HQTCSDL\PetShop\DBMS_FinalProject\obj\Debug\DBMS_Final_Project.csproj.CoreCompileInputs.cache
+D:\HQTCSDL\PetShop\DBMS_FinalProject\bin\Debug\DBMS_Final_Project.exe.config
+D:\HQTCSDL\PetShop\DBMS_FinalProject\bin\Debug\DBMS_Final_Project.exe
+D:\HQTCSDL\PetShop\DBMS_FinalProject\bin\Debug\DBMS_Final_Project.pdb
+D:\HQTCSDL\PetShop\DBMS_FinalProject\obj\Debug\DBMS_Final_Project.exe
+D:\HQTCSDL\PetShop\DBMS_FinalProject\obj\Debug\DBMS_Final_Project.pdb
