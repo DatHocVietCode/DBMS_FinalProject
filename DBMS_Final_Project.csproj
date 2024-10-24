@@ -49,7 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="control\converter\imageLinkConverter.cs" />
-    <Compile Include="database\DataBase.cs" />
+    <Compile Include="database\Database.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="view\ChucNangBanHang\cardvatpham.cs">
@@ -94,6 +94,12 @@
     </Compile>
     <Compile Include="view\DataGridViewTemplate\UC_DataGridView.Designer.cs">
       <DependentUpon>UC_DataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Fmanager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Fmanager.Designer.cs">
+      <DependentUpon>Fmanager.cs</DependentUpon>
     </Compile>
     <Compile Include="view\login.cs">
       <SubType>Form</SubType>
@@ -148,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\DataGridViewTemplate\UC_DataGridView.resx">
       <DependentUpon>UC_DataGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Fmanager.resx">
+      <DependentUpon>Fmanager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\login.resx">
       <DependentUpon>login.cs</DependentUpon>

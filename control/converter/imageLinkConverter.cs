@@ -43,4 +43,8 @@ namespace DBMS_Final_Project.control.converter
             throw new NotImplementedException();
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> eef1b8a63abbf6f707caba420b04ac3a412e8c77
