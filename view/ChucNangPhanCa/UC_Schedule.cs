@@ -11,7 +11,7 @@ using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using DBMS_Final_Project.database;
 namespace DBMS_Final_Project.view
 {
     public partial class UC_Schedule : UserControl

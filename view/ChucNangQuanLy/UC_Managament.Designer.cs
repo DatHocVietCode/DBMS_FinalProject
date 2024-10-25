@@ -1,6 +1,6 @@
 ﻿namespace DBMS_Final_Project.view
 {
-    partial class Fmanager
+    partial class UC_Management
     {
         /// <summary>
         /// Required designer variable.
@@ -49,10 +49,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.txt_MaNV_TK = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
+            this.txb_TenNVTK = new System.Windows.Forms.TextBox();
+            this.btn_TimKiemNV = new System.Windows.Forms.Button();
             this.btn_SuaNhanVien = new System.Windows.Forms.Button();
-            this.btn_XoaNhanVien = new System.Windows.Forms.Button();
             this.btn_ThemNhanVien = new System.Windows.Forms.Button();
             this.dgvNhanVien = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -88,14 +87,14 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.txb_TenTCTK = new System.Windows.Forms.TextBox();
+            this.btn_TimKiemTC = new System.Windows.Forms.Button();
             this.btn_SuaThuCung = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.btn_ThemThuCung = new System.Windows.Forms.Button();
             this.dgv_ThuCung = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_ThemAnhVP = new System.Windows.Forms.Button();
             this.txb_GiaKMVP = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.txb_GiaGocVP = new System.Windows.Forms.TextBox();
@@ -114,14 +113,14 @@
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txb_TenVPTK = new System.Windows.Forms.TextBox();
+            this.btn_TimKiemVP = new System.Windows.Forms.Button();
             this.btn_SuaVP = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             this.btn_ThemVP = new System.Windows.Forms.Button();
             this.dgv_VatPham = new System.Windows.Forms.DataGridView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btn_ThemAnhDV = new System.Windows.Forms.Button();
             this.txb_SoPhong = new System.Windows.Forms.TextBox();
             this.label49 = new System.Windows.Forms.Label();
             this.txb_GiaKMDV = new System.Windows.Forms.TextBox();
@@ -138,10 +137,9 @@
             this.label40 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
-            this.textBox31 = new System.Windows.Forms.TextBox();
-            this.button10 = new System.Windows.Forms.Button();
+            this.txb_TenDVTK = new System.Windows.Forms.TextBox();
+            this.btn_TimKiemDV = new System.Windows.Forms.Button();
             this.btn_SuaDV = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
             this.btn_ThemDV = new System.Windows.Forms.Button();
             this.dgv_DichVu = new System.Windows.Forms.DataGridView();
             this.tabpage5 = new System.Windows.Forms.TabPage();
@@ -154,14 +152,10 @@
             this.txb_MaKH = new System.Windows.Forms.TextBox();
             this.label47 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.txb_TenKHTK = new System.Windows.Forms.TextBox();
+            this.btn_TimKiemKH = new System.Windows.Forms.Button();
+            this.btn_SuaKH = new System.Windows.Forms.Button();
             this.dgv_KhachHang = new System.Windows.Forms.DataGridView();
-            this.btn_ThemAnhVP = new System.Windows.Forms.Button();
-            this.btn_ThemAnhDV = new System.Windows.Forms.Button();
             this.Dgv.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -187,25 +181,24 @@
             this.Dgv.Controls.Add(this.tabPage3);
             this.Dgv.Controls.Add(this.tabPage4);
             this.Dgv.Controls.Add(this.tabpage5);
-            this.Dgv.Location = new System.Drawing.Point(-1, 0);
+            this.Dgv.Location = new System.Drawing.Point(0, 0);
             this.Dgv.Name = "Dgv";
             this.Dgv.SelectedIndex = 0;
-            this.Dgv.Size = new System.Drawing.Size(1283, 616);
+            this.Dgv.Size = new System.Drawing.Size(1501, 797);
             this.Dgv.TabIndex = 0;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.panel3);
-            this.tabPage1.Controls.Add(this.txt_MaNV_TK);
-            this.tabPage1.Controls.Add(this.button5);
+            this.tabPage1.Controls.Add(this.txb_TenNVTK);
+            this.tabPage1.Controls.Add(this.btn_TimKiemNV);
             this.tabPage1.Controls.Add(this.btn_SuaNhanVien);
-            this.tabPage1.Controls.Add(this.btn_XoaNhanVien);
             this.tabPage1.Controls.Add(this.btn_ThemNhanVien);
             this.tabPage1.Controls.Add(this.dgvNhanVien);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1275, 587);
+            this.tabPage1.Size = new System.Drawing.Size(1493, 768);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Nhân viên";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -230,7 +223,7 @@
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.label8);
-            this.panel3.Location = new System.Drawing.Point(727, 67);
+            this.panel3.Location = new System.Drawing.Point(953, 64);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(534, 501);
             this.panel3.TabIndex = 56;
@@ -401,28 +394,28 @@
             this.label8.TabIndex = 67;
             this.label8.Text = "Tên nhân viên";
             // 
-            // txt_MaNV_TK
+            // txb_TenNVTK
             // 
-            this.txt_MaNV_TK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_MaNV_TK.Location = new System.Drawing.Point(12, 15);
-            this.txt_MaNV_TK.Name = "txt_MaNV_TK";
-            this.txt_MaNV_TK.Size = new System.Drawing.Size(564, 30);
-            this.txt_MaNV_TK.TabIndex = 55;
+            this.txb_TenNVTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_TenNVTK.Location = new System.Drawing.Point(12, 15);
+            this.txb_TenNVTK.Name = "txb_TenNVTK";
+            this.txb_TenNVTK.Size = new System.Drawing.Size(795, 30);
+            this.txb_TenNVTK.TabIndex = 55;
             // 
-            // button5
+            // btn_TimKiemNV
             // 
-            this.button5.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(601, 15);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(104, 36);
-            this.button5.TabIndex = 54;
-            this.button5.Text = "Tìm kiếm";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btn_TimKiemNV.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_TimKiemNV.Location = new System.Drawing.Point(843, 15);
+            this.btn_TimKiemNV.Name = "btn_TimKiemNV";
+            this.btn_TimKiemNV.Size = new System.Drawing.Size(104, 36);
+            this.btn_TimKiemNV.TabIndex = 54;
+            this.btn_TimKiemNV.Text = "Tìm kiếm";
+            this.btn_TimKiemNV.UseVisualStyleBackColor = true;
             // 
             // btn_SuaNhanVien
             // 
             this.btn_SuaNhanVien.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SuaNhanVien.Location = new System.Drawing.Point(1091, 15);
+            this.btn_SuaNhanVien.Location = new System.Drawing.Point(1211, 12);
             this.btn_SuaNhanVien.Name = "btn_SuaNhanVien";
             this.btn_SuaNhanVien.Size = new System.Drawing.Size(104, 36);
             this.btn_SuaNhanVien.TabIndex = 53;
@@ -430,20 +423,10 @@
             this.btn_SuaNhanVien.UseVisualStyleBackColor = true;
             this.btn_SuaNhanVien.Click += new System.EventHandler(this.btn_SuaNhanVien_Click);
             // 
-            // btn_XoaNhanVien
-            // 
-            this.btn_XoaNhanVien.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_XoaNhanVien.Location = new System.Drawing.Point(940, 15);
-            this.btn_XoaNhanVien.Name = "btn_XoaNhanVien";
-            this.btn_XoaNhanVien.Size = new System.Drawing.Size(104, 36);
-            this.btn_XoaNhanVien.TabIndex = 52;
-            this.btn_XoaNhanVien.Text = "Xóa";
-            this.btn_XoaNhanVien.UseVisualStyleBackColor = true;
-            // 
             // btn_ThemNhanVien
             // 
             this.btn_ThemNhanVien.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ThemNhanVien.Location = new System.Drawing.Point(778, 15);
+            this.btn_ThemNhanVien.Location = new System.Drawing.Point(1070, 12);
             this.btn_ThemNhanVien.Name = "btn_ThemNhanVien";
             this.btn_ThemNhanVien.Size = new System.Drawing.Size(104, 36);
             this.btn_ThemNhanVien.TabIndex = 51;
@@ -458,23 +441,22 @@
             this.dgvNhanVien.Name = "dgvNhanVien";
             this.dgvNhanVien.RowHeadersWidth = 51;
             this.dgvNhanVien.RowTemplate.Height = 24;
-            this.dgvNhanVien.Size = new System.Drawing.Size(693, 505);
+            this.dgvNhanVien.Size = new System.Drawing.Size(935, 698);
             this.dgvNhanVien.TabIndex = 1;
             this.dgvNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanVien_CellClick);
             // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.panel1);
-            this.tabPage2.Controls.Add(this.textBox9);
-            this.tabPage2.Controls.Add(this.button2);
+            this.tabPage2.Controls.Add(this.txb_TenTCTK);
+            this.tabPage2.Controls.Add(this.btn_TimKiemTC);
             this.tabPage2.Controls.Add(this.btn_SuaThuCung);
-            this.tabPage2.Controls.Add(this.button4);
             this.tabPage2.Controls.Add(this.btn_ThemThuCung);
             this.tabPage2.Controls.Add(this.dgv_ThuCung);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1275, 587);
+            this.tabPage2.Size = new System.Drawing.Size(1493, 768);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Thú cưng";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -514,7 +496,7 @@
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label16);
-            this.panel1.Location = new System.Drawing.Point(727, 68);
+            this.panel1.Location = new System.Drawing.Point(946, 64);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(547, 502);
             this.panel1.TabIndex = 79;
@@ -803,28 +785,28 @@
             this.label16.TabIndex = 67;
             this.label16.Text = "Tên thú cưng:";
             // 
-            // textBox9
+            // txb_TenTCTK
             // 
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(12, 15);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(564, 30);
-            this.textBox9.TabIndex = 78;
+            this.txb_TenTCTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_TenTCTK.Location = new System.Drawing.Point(12, 15);
+            this.txb_TenTCTK.Name = "txb_TenTCTK";
+            this.txb_TenTCTK.Size = new System.Drawing.Size(812, 30);
+            this.txb_TenTCTK.TabIndex = 78;
             // 
-            // button2
+            // btn_TimKiemTC
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(604, 16);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(104, 36);
-            this.button2.TabIndex = 77;
-            this.button2.Text = "Tìm kiếm";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_TimKiemTC.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_TimKiemTC.Location = new System.Drawing.Point(830, 15);
+            this.btn_TimKiemTC.Name = "btn_TimKiemTC";
+            this.btn_TimKiemTC.Size = new System.Drawing.Size(104, 36);
+            this.btn_TimKiemTC.TabIndex = 77;
+            this.btn_TimKiemTC.Text = "Tìm kiếm";
+            this.btn_TimKiemTC.UseVisualStyleBackColor = true;
             // 
             // btn_SuaThuCung
             // 
             this.btn_SuaThuCung.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SuaThuCung.Location = new System.Drawing.Point(1094, 16);
+            this.btn_SuaThuCung.Location = new System.Drawing.Point(1210, 15);
             this.btn_SuaThuCung.Name = "btn_SuaThuCung";
             this.btn_SuaThuCung.Size = new System.Drawing.Size(104, 36);
             this.btn_SuaThuCung.TabIndex = 76;
@@ -832,20 +814,10 @@
             this.btn_SuaThuCung.UseVisualStyleBackColor = true;
             this.btn_SuaThuCung.Click += new System.EventHandler(this.btn_SuaThuCung_Click);
             // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(943, 16);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(104, 36);
-            this.button4.TabIndex = 75;
-            this.button4.Text = "Xóa";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
             // btn_ThemThuCung
             // 
             this.btn_ThemThuCung.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ThemThuCung.Location = new System.Drawing.Point(781, 16);
+            this.btn_ThemThuCung.Location = new System.Drawing.Point(1054, 15);
             this.btn_ThemThuCung.Name = "btn_ThemThuCung";
             this.btn_ThemThuCung.Size = new System.Drawing.Size(104, 36);
             this.btn_ThemThuCung.TabIndex = 74;
@@ -860,23 +832,22 @@
             this.dgv_ThuCung.Name = "dgv_ThuCung";
             this.dgv_ThuCung.RowHeadersWidth = 51;
             this.dgv_ThuCung.RowTemplate.Height = 24;
-            this.dgv_ThuCung.Size = new System.Drawing.Size(693, 505);
+            this.dgv_ThuCung.Size = new System.Drawing.Size(922, 701);
             this.dgv_ThuCung.TabIndex = 67;
             this.dgv_ThuCung.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ThuCung_CellClick);
             // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.panel2);
-            this.tabPage3.Controls.Add(this.textBox22);
-            this.tabPage3.Controls.Add(this.button1);
+            this.tabPage3.Controls.Add(this.txb_TenVPTK);
+            this.tabPage3.Controls.Add(this.btn_TimKiemVP);
             this.tabPage3.Controls.Add(this.btn_SuaVP);
-            this.tabPage3.Controls.Add(this.button8);
             this.tabPage3.Controls.Add(this.btn_ThemVP);
             this.tabPage3.Controls.Add(this.dgv_VatPham);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1275, 587);
+            this.tabPage3.Size = new System.Drawing.Size(1493, 768);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Vật phẩm";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -904,10 +875,20 @@
             this.panel2.Controls.Add(this.label27);
             this.panel2.Controls.Add(this.label28);
             this.panel2.Controls.Add(this.label29);
-            this.panel2.Location = new System.Drawing.Point(727, 67);
+            this.panel2.Location = new System.Drawing.Point(953, 68);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(534, 501);
+            this.panel2.Size = new System.Drawing.Size(534, 694);
             this.panel2.TabIndex = 86;
+            // 
+            // btn_ThemAnhVP
+            // 
+            this.btn_ThemAnhVP.Location = new System.Drawing.Point(154, 374);
+            this.btn_ThemAnhVP.Name = "btn_ThemAnhVP";
+            this.btn_ThemAnhVP.Size = new System.Drawing.Size(85, 33);
+            this.btn_ThemAnhVP.TabIndex = 106;
+            this.btn_ThemAnhVP.Text = "Thêm Ảnh";
+            this.btn_ThemAnhVP.UseVisualStyleBackColor = true;
+            this.btn_ThemAnhVP.Click += new System.EventHandler(this.btn_ThemAnhVP_Click);
             // 
             // txb_GiaKMVP
             // 
@@ -1072,28 +1053,28 @@
             this.label29.TabIndex = 67;
             this.label29.Text = "Tên vật phẩm:";
             // 
-            // textBox22
+            // txb_TenVPTK
             // 
-            this.textBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox22.Location = new System.Drawing.Point(12, 15);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(564, 30);
-            this.textBox22.TabIndex = 85;
+            this.txb_TenVPTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_TenVPTK.Location = new System.Drawing.Point(12, 15);
+            this.txb_TenVPTK.Name = "txb_TenVPTK";
+            this.txb_TenVPTK.Size = new System.Drawing.Size(825, 30);
+            this.txb_TenVPTK.TabIndex = 85;
             // 
-            // button1
+            // btn_TimKiemVP
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(597, 16);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 36);
-            this.button1.TabIndex = 84;
-            this.button1.Text = "Tìm kiếm";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_TimKiemVP.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_TimKiemVP.Location = new System.Drawing.Point(843, 12);
+            this.btn_TimKiemVP.Name = "btn_TimKiemVP";
+            this.btn_TimKiemVP.Size = new System.Drawing.Size(104, 36);
+            this.btn_TimKiemVP.TabIndex = 84;
+            this.btn_TimKiemVP.Text = "Tìm kiếm";
+            this.btn_TimKiemVP.UseVisualStyleBackColor = true;
             // 
             // btn_SuaVP
             // 
             this.btn_SuaVP.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SuaVP.Location = new System.Drawing.Point(1087, 16);
+            this.btn_SuaVP.Location = new System.Drawing.Point(1205, 16);
             this.btn_SuaVP.Name = "btn_SuaVP";
             this.btn_SuaVP.Size = new System.Drawing.Size(104, 36);
             this.btn_SuaVP.TabIndex = 83;
@@ -1101,20 +1082,10 @@
             this.btn_SuaVP.UseVisualStyleBackColor = true;
             this.btn_SuaVP.Click += new System.EventHandler(this.btn_SuaVP_Click);
             // 
-            // button8
-            // 
-            this.button8.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(936, 16);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(104, 36);
-            this.button8.TabIndex = 82;
-            this.button8.Text = "Xóa";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
             // btn_ThemVP
             // 
             this.btn_ThemVP.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ThemVP.Location = new System.Drawing.Point(774, 16);
+            this.btn_ThemVP.Location = new System.Drawing.Point(1070, 16);
             this.btn_ThemVP.Name = "btn_ThemVP";
             this.btn_ThemVP.Size = new System.Drawing.Size(104, 36);
             this.btn_ThemVP.TabIndex = 81;
@@ -1129,23 +1100,22 @@
             this.dgv_VatPham.Name = "dgv_VatPham";
             this.dgv_VatPham.RowHeadersWidth = 51;
             this.dgv_VatPham.RowTemplate.Height = 24;
-            this.dgv_VatPham.Size = new System.Drawing.Size(693, 505);
+            this.dgv_VatPham.Size = new System.Drawing.Size(935, 698);
             this.dgv_VatPham.TabIndex = 80;
             this.dgv_VatPham.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_VatPham_CellClick);
             // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.panel4);
-            this.tabPage4.Controls.Add(this.textBox31);
-            this.tabPage4.Controls.Add(this.button10);
+            this.tabPage4.Controls.Add(this.txb_TenDVTK);
+            this.tabPage4.Controls.Add(this.btn_TimKiemDV);
             this.tabPage4.Controls.Add(this.btn_SuaDV);
-            this.tabPage4.Controls.Add(this.button12);
             this.tabPage4.Controls.Add(this.btn_ThemDV);
             this.tabPage4.Controls.Add(this.dgv_DichVu);
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1275, 587);
+            this.tabPage4.Size = new System.Drawing.Size(1493, 768);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Dịch vụ";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -1171,10 +1141,20 @@
             this.panel4.Controls.Add(this.label40);
             this.panel4.Controls.Add(this.label41);
             this.panel4.Controls.Add(this.label42);
-            this.panel4.Location = new System.Drawing.Point(727, 67);
+            this.panel4.Location = new System.Drawing.Point(953, 64);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(534, 501);
             this.panel4.TabIndex = 93;
+            // 
+            // btn_ThemAnhDV
+            // 
+            this.btn_ThemAnhDV.Location = new System.Drawing.Point(153, 243);
+            this.btn_ThemAnhDV.Name = "btn_ThemAnhDV";
+            this.btn_ThemAnhDV.Size = new System.Drawing.Size(85, 33);
+            this.btn_ThemAnhDV.TabIndex = 108;
+            this.btn_ThemAnhDV.Text = "Thêm Ảnh";
+            this.btn_ThemAnhDV.UseVisualStyleBackColor = true;
+            this.btn_ThemAnhDV.Click += new System.EventHandler(this.btn_ThemAnhDV_Click);
             // 
             // txb_SoPhong
             // 
@@ -1321,28 +1301,28 @@
             this.label42.TabIndex = 67;
             this.label42.Text = "Tên dịch vụ:";
             // 
-            // textBox31
+            // txb_TenDVTK
             // 
-            this.textBox31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox31.Location = new System.Drawing.Point(12, 15);
-            this.textBox31.Name = "textBox31";
-            this.textBox31.Size = new System.Drawing.Size(564, 30);
-            this.textBox31.TabIndex = 92;
+            this.txb_TenDVTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_TenDVTK.Location = new System.Drawing.Point(12, 15);
+            this.txb_TenDVTK.Name = "txb_TenDVTK";
+            this.txb_TenDVTK.Size = new System.Drawing.Size(825, 30);
+            this.txb_TenDVTK.TabIndex = 92;
             // 
-            // button10
+            // btn_TimKiemDV
             // 
-            this.button10.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(597, 16);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(104, 36);
-            this.button10.TabIndex = 91;
-            this.button10.Text = "Tìm kiếm";
-            this.button10.UseVisualStyleBackColor = true;
+            this.btn_TimKiemDV.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_TimKiemDV.Location = new System.Drawing.Point(843, 9);
+            this.btn_TimKiemDV.Name = "btn_TimKiemDV";
+            this.btn_TimKiemDV.Size = new System.Drawing.Size(104, 36);
+            this.btn_TimKiemDV.TabIndex = 91;
+            this.btn_TimKiemDV.Text = "Tìm kiếm";
+            this.btn_TimKiemDV.UseVisualStyleBackColor = true;
             // 
             // btn_SuaDV
             // 
             this.btn_SuaDV.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SuaDV.Location = new System.Drawing.Point(1087, 16);
+            this.btn_SuaDV.Location = new System.Drawing.Point(1206, 15);
             this.btn_SuaDV.Name = "btn_SuaDV";
             this.btn_SuaDV.Size = new System.Drawing.Size(104, 36);
             this.btn_SuaDV.TabIndex = 90;
@@ -1350,20 +1330,10 @@
             this.btn_SuaDV.UseVisualStyleBackColor = true;
             this.btn_SuaDV.Click += new System.EventHandler(this.btn_SuaDV_Click);
             // 
-            // button12
-            // 
-            this.button12.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.Location = new System.Drawing.Point(936, 16);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(104, 36);
-            this.button12.TabIndex = 89;
-            this.button12.Text = "Xóa";
-            this.button12.UseVisualStyleBackColor = true;
-            // 
             // btn_ThemDV
             // 
             this.btn_ThemDV.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ThemDV.Location = new System.Drawing.Point(774, 16);
+            this.btn_ThemDV.Location = new System.Drawing.Point(1047, 15);
             this.btn_ThemDV.Name = "btn_ThemDV";
             this.btn_ThemDV.Size = new System.Drawing.Size(104, 36);
             this.btn_ThemDV.TabIndex = 88;
@@ -1378,23 +1348,21 @@
             this.dgv_DichVu.Name = "dgv_DichVu";
             this.dgv_DichVu.RowHeadersWidth = 51;
             this.dgv_DichVu.RowTemplate.Height = 24;
-            this.dgv_DichVu.Size = new System.Drawing.Size(693, 505);
+            this.dgv_DichVu.Size = new System.Drawing.Size(935, 698);
             this.dgv_DichVu.TabIndex = 87;
             this.dgv_DichVu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DichVu_CellClick);
             // 
             // tabpage5
             // 
             this.tabpage5.Controls.Add(this.panel5);
-            this.tabpage5.Controls.Add(this.textBox7);
-            this.tabpage5.Controls.Add(this.button3);
-            this.tabpage5.Controls.Add(this.button6);
-            this.tabpage5.Controls.Add(this.button7);
-            this.tabpage5.Controls.Add(this.button9);
+            this.tabpage5.Controls.Add(this.txb_TenKHTK);
+            this.tabpage5.Controls.Add(this.btn_TimKiemKH);
+            this.tabpage5.Controls.Add(this.btn_SuaKH);
             this.tabpage5.Controls.Add(this.dgv_KhachHang);
             this.tabpage5.Location = new System.Drawing.Point(4, 25);
             this.tabpage5.Name = "tabpage5";
             this.tabpage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabpage5.Size = new System.Drawing.Size(1275, 587);
+            this.tabpage5.Size = new System.Drawing.Size(1493, 768);
             this.tabpage5.TabIndex = 4;
             this.tabpage5.Text = "Khách hàng";
             this.tabpage5.UseVisualStyleBackColor = true;
@@ -1411,7 +1379,7 @@
             this.panel5.Controls.Add(this.txb_MaKH);
             this.panel5.Controls.Add(this.label47);
             this.panel5.Controls.Add(this.label48);
-            this.panel5.Location = new System.Drawing.Point(728, 68);
+            this.panel5.Location = new System.Drawing.Point(953, 69);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(534, 501);
             this.panel5.TabIndex = 100;
@@ -1489,53 +1457,34 @@
             this.label48.TabIndex = 67;
             this.label48.Text = "Tên khách hàng:";
             // 
-            // textBox7
+            // txb_TenKHTK
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(13, 16);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(564, 30);
-            this.textBox7.TabIndex = 99;
+            this.txb_TenKHTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_TenKHTK.Location = new System.Drawing.Point(13, 16);
+            this.txb_TenKHTK.Name = "txb_TenKHTK";
+            this.txb_TenKHTK.Size = new System.Drawing.Size(824, 30);
+            this.txb_TenKHTK.TabIndex = 99;
             // 
-            // button3
+            // btn_TimKiemKH
             // 
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(598, 17);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(104, 36);
-            this.button3.TabIndex = 98;
-            this.button3.Text = "Tìm kiếm";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_TimKiemKH.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_TimKiemKH.Location = new System.Drawing.Point(843, 10);
+            this.btn_TimKiemKH.Name = "btn_TimKiemKH";
+            this.btn_TimKiemKH.Size = new System.Drawing.Size(104, 36);
+            this.btn_TimKiemKH.TabIndex = 98;
+            this.btn_TimKiemKH.Text = "Tìm kiếm";
+            this.btn_TimKiemKH.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btn_SuaKH
             // 
-            this.button6.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(1088, 17);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(104, 36);
-            this.button6.TabIndex = 97;
-            this.button6.Text = "Sửa";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(937, 17);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(104, 36);
-            this.button7.TabIndex = 96;
-            this.button7.Text = "Xóa";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(775, 17);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(104, 36);
-            this.button9.TabIndex = 95;
-            this.button9.Text = "Thêm";
-            this.button9.UseVisualStyleBackColor = true;
+            this.btn_SuaKH.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SuaKH.Location = new System.Drawing.Point(1018, 13);
+            this.btn_SuaKH.Name = "btn_SuaKH";
+            this.btn_SuaKH.Size = new System.Drawing.Size(104, 36);
+            this.btn_SuaKH.TabIndex = 97;
+            this.btn_SuaKH.Text = "Sửa";
+            this.btn_SuaKH.UseVisualStyleBackColor = true;
+            this.btn_SuaKH.Click += new System.EventHandler(this.btn_SuaKH_Click_1);
             // 
             // dgv_KhachHang
             // 
@@ -1544,38 +1493,17 @@
             this.dgv_KhachHang.Name = "dgv_KhachHang";
             this.dgv_KhachHang.RowHeadersWidth = 51;
             this.dgv_KhachHang.RowTemplate.Height = 24;
-            this.dgv_KhachHang.Size = new System.Drawing.Size(693, 505);
+            this.dgv_KhachHang.Size = new System.Drawing.Size(934, 703);
             this.dgv_KhachHang.TabIndex = 94;
             this.dgv_KhachHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_KhachHang_CellClick);
             // 
-            // btn_ThemAnhVP
-            // 
-            this.btn_ThemAnhVP.Location = new System.Drawing.Point(154, 374);
-            this.btn_ThemAnhVP.Name = "btn_ThemAnhVP";
-            this.btn_ThemAnhVP.Size = new System.Drawing.Size(85, 33);
-            this.btn_ThemAnhVP.TabIndex = 106;
-            this.btn_ThemAnhVP.Text = "Thêm Ảnh";
-            this.btn_ThemAnhVP.UseVisualStyleBackColor = true;
-            this.btn_ThemAnhVP.Click += new System.EventHandler(this.btn_ThemAnhVP_Click);
-            // 
-            // btn_ThemAnhDV
-            // 
-            this.btn_ThemAnhDV.Location = new System.Drawing.Point(153, 243);
-            this.btn_ThemAnhDV.Name = "btn_ThemAnhDV";
-            this.btn_ThemAnhDV.Size = new System.Drawing.Size(85, 33);
-            this.btn_ThemAnhDV.TabIndex = 108;
-            this.btn_ThemAnhDV.Text = "Thêm Ảnh";
-            this.btn_ThemAnhDV.UseVisualStyleBackColor = true;
-            this.btn_ThemAnhDV.Click += new System.EventHandler(this.btn_ThemAnhDV_Click);
-            // 
-            // Fmanager
+            // UC_Management
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1282, 618);
             this.Controls.Add(this.Dgv);
-            this.Name = "Fmanager";
-            this.Text = "Fmanager";
+            this.Name = "UC_Management";
+            this.Size = new System.Drawing.Size(1500, 800);
             this.Load += new System.EventHandler(this.Fmanager_Load);
             this.Dgv.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -1613,15 +1541,13 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.DataGridView dgvNhanVien;
-        private System.Windows.Forms.TextBox txt_MaNV_TK;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox txb_TenNVTK;
+        private System.Windows.Forms.Button btn_TimKiemNV;
         private System.Windows.Forms.Button btn_SuaNhanVien;
-        private System.Windows.Forms.Button btn_XoaNhanVien;
         private System.Windows.Forms.Button btn_ThemNhanVien;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txb_TenTCTK;
+        private System.Windows.Forms.Button btn_TimKiemTC;
         private System.Windows.Forms.Button btn_SuaThuCung;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btn_ThemThuCung;
         private System.Windows.Forms.DataGridView dgv_ThuCung;
         private System.Windows.Forms.Panel panel1;
@@ -1652,10 +1578,9 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TextBox txb_MoTaTC;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txb_TenVPTK;
+        private System.Windows.Forms.Button btn_TimKiemVP;
         private System.Windows.Forms.Button btn_SuaVP;
-        private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button btn_ThemVP;
         private System.Windows.Forms.DataGridView dgv_VatPham;
         private System.Windows.Forms.TextBox txb_GiaKMTC;
@@ -1714,10 +1639,9 @@
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.TextBox textBox31;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.TextBox txb_TenDVTK;
+        private System.Windows.Forms.Button btn_TimKiemDV;
         private System.Windows.Forms.Button btn_SuaDV;
-        private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button btn_ThemDV;
         private System.Windows.Forms.DataGridView dgv_DichVu;
         private System.Windows.Forms.TextBox txb_CongViec;
@@ -1728,11 +1652,9 @@
         private System.Windows.Forms.TextBox txb_MaKH;
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.TextBox txb_TenKHTK;
+        private System.Windows.Forms.Button btn_TimKiemKH;
+        private System.Windows.Forms.Button btn_SuaKH;
         private System.Windows.Forms.DataGridView dgv_KhachHang;
         private System.Windows.Forms.TextBox txb_SoPhong;
         private System.Windows.Forms.Label label49;

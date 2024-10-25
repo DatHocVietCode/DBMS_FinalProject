@@ -11,7 +11,7 @@ namespace DBMS_Final_Project.database
 {
     public class Database
     {
-        private string connectionString = @"server=(localdb)\MSSQLLocalDB;Database=PetShop;Integrated Security=True;";
+        static public string connectionString = @"server=(localdb)\MSSQLLocalDB;Database=PetShop;Integrated Security=True;";
         private SqlConnection conn;
         public Database()
         {

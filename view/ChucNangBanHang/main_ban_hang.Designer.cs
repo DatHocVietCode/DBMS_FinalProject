@@ -103,7 +103,7 @@
             // 
             this.lbl_title.AutoSize = true;
             this.lbl_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_title.Location = new System.Drawing.Point(511, 9);
+            this.lbl_title.Location = new System.Drawing.Point(9, 9);
             this.lbl_title.Name = "lbl_title";
             this.lbl_title.Size = new System.Drawing.Size(137, 31);
             this.lbl_title.TabIndex = 0;
@@ -117,7 +117,7 @@
             this.tc_ban_hang.Location = new System.Drawing.Point(0, 43);
             this.tc_ban_hang.Name = "tc_ban_hang";
             this.tc_ban_hang.SelectedIndex = 0;
-            this.tc_ban_hang.Size = new System.Drawing.Size(1143, 586);
+            this.tc_ban_hang.Size = new System.Drawing.Size(1140, 761);
             this.tc_ban_hang.TabIndex = 1;
             this.tc_ban_hang.SelectedIndexChanged += new System.EventHandler(this.tc_ban_hang_SelectedIndexChanged);
             // 
@@ -142,7 +142,7 @@
             this.tp_spdv.Location = new System.Drawing.Point(4, 25);
             this.tp_spdv.Name = "tp_spdv";
             this.tp_spdv.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_spdv.Size = new System.Drawing.Size(1135, 557);
+            this.tp_spdv.Size = new System.Drawing.Size(1132, 732);
             this.tp_spdv.TabIndex = 0;
             this.tp_spdv.Text = "Sản phẩm và dịch vụ";
             this.tp_spdv.Click += new System.EventHandler(this.tp_spdv_Click);
@@ -162,9 +162,9 @@
             this.panel_tao_hoadon_moi.Controls.Add(this.btn_xac_nhan);
             this.panel_tao_hoadon_moi.Controls.Add(this.btn_huy_bo);
             this.panel_tao_hoadon_moi.Controls.Add(this.lv_hoa_don);
-            this.panel_tao_hoadon_moi.Location = new System.Drawing.Point(724, 95);
+            this.panel_tao_hoadon_moi.Location = new System.Drawing.Point(711, 93);
             this.panel_tao_hoadon_moi.Name = "panel_tao_hoadon_moi";
-            this.panel_tao_hoadon_moi.Size = new System.Drawing.Size(423, 462);
+            this.panel_tao_hoadon_moi.Size = new System.Drawing.Size(423, 472);
             this.panel_tao_hoadon_moi.TabIndex = 0;
             // 
             // lbl_tong_tien
@@ -278,7 +278,7 @@
             this.lv_hoa_don.HideSelection = false;
             this.lv_hoa_don.Location = new System.Drawing.Point(4, 3);
             this.lv_hoa_don.Name = "lv_hoa_don";
-            this.lv_hoa_don.Size = new System.Drawing.Size(398, 242);
+            this.lv_hoa_don.Size = new System.Drawing.Size(416, 242);
             this.lv_hoa_don.TabIndex = 21;
             this.lv_hoa_don.UseCompatibleStateImageBehavior = false;
             // 
@@ -352,7 +352,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(860, 70);
+            this.label4.Location = new System.Drawing.Point(851, 70);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(148, 20);
             this.label4.TabIndex = 10;
@@ -367,7 +367,7 @@
             this.tb_types.Location = new System.Drawing.Point(0, 70);
             this.tb_types.Name = "tb_types";
             this.tb_types.SelectedIndex = 0;
-            this.tb_types.Size = new System.Drawing.Size(728, 484);
+            this.tb_types.Size = new System.Drawing.Size(709, 666);
             this.tb_types.TabIndex = 5;
             // 
             // tp_thu_cung
@@ -376,7 +376,7 @@
             this.tp_thu_cung.Location = new System.Drawing.Point(4, 25);
             this.tp_thu_cung.Name = "tp_thu_cung";
             this.tp_thu_cung.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_thu_cung.Size = new System.Drawing.Size(720, 455);
+            this.tp_thu_cung.Size = new System.Drawing.Size(701, 637);
             this.tp_thu_cung.TabIndex = 0;
             this.tp_thu_cung.Text = "Thú cưng";
             this.tp_thu_cung.UseVisualStyleBackColor = true;
@@ -384,9 +384,9 @@
             // flp_thu_cung
             // 
             this.flp_thu_cung.AutoScroll = true;
-            this.flp_thu_cung.Location = new System.Drawing.Point(0, 0);
+            this.flp_thu_cung.Location = new System.Drawing.Point(7, 3);
             this.flp_thu_cung.Name = "flp_thu_cung";
-            this.flp_thu_cung.Size = new System.Drawing.Size(714, 469);
+            this.flp_thu_cung.Size = new System.Drawing.Size(689, 631);
             this.flp_thu_cung.TabIndex = 0;
             this.flp_thu_cung.Paint += new System.Windows.Forms.PaintEventHandler(this.flp_thu_cung_Paint);
             // 
@@ -396,7 +396,7 @@
             this.tp_vat_pham.Location = new System.Drawing.Point(4, 25);
             this.tp_vat_pham.Name = "tp_vat_pham";
             this.tp_vat_pham.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_vat_pham.Size = new System.Drawing.Size(720, 455);
+            this.tp_vat_pham.Size = new System.Drawing.Size(1060, 637);
             this.tp_vat_pham.TabIndex = 1;
             this.tp_vat_pham.Text = "Vật phẩm";
             this.tp_vat_pham.UseVisualStyleBackColor = true;
@@ -414,7 +414,7 @@
             this.tp_dich_vu.Controls.Add(this.flp_dichvu);
             this.tp_dich_vu.Location = new System.Drawing.Point(4, 25);
             this.tp_dich_vu.Name = "tp_dich_vu";
-            this.tp_dich_vu.Size = new System.Drawing.Size(720, 455);
+            this.tp_dich_vu.Size = new System.Drawing.Size(1060, 637);
             this.tp_dich_vu.TabIndex = 2;
             this.tp_dich_vu.Text = "Dịch vụ";
             this.tp_dich_vu.UseVisualStyleBackColor = true;
@@ -429,7 +429,7 @@
             // 
             // btn_tim_kiem
             // 
-            this.btn_tim_kiem.Location = new System.Drawing.Point(781, 19);
+            this.btn_tim_kiem.Location = new System.Drawing.Point(759, 27);
             this.btn_tim_kiem.Name = "btn_tim_kiem";
             this.btn_tim_kiem.Size = new System.Drawing.Size(29, 24);
             this.btn_tim_kiem.TabIndex = 4;
@@ -438,7 +438,7 @@
             // 
             // txt_tim_kiem
             // 
-            this.txt_tim_kiem.Location = new System.Drawing.Point(816, 19);
+            this.txt_tim_kiem.Location = new System.Drawing.Point(794, 27);
             this.txt_tim_kiem.Name = "txt_tim_kiem";
             this.txt_tim_kiem.Size = new System.Drawing.Size(273, 22);
             this.txt_tim_kiem.TabIndex = 3;
@@ -474,13 +474,14 @@
             // 
             // tp_hoa_don
             // 
+            this.tp_hoa_don.Controls.Add(this.btn_chinh_sua_hoadon);
             this.tp_hoa_don.Controls.Add(this.label2);
             this.tp_hoa_don.Controls.Add(this.dtp);
             this.tp_hoa_don.Controls.Add(this.tc_hoa_don);
             this.tp_hoa_don.Location = new System.Drawing.Point(4, 25);
             this.tp_hoa_don.Name = "tp_hoa_don";
             this.tp_hoa_don.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_hoa_don.Size = new System.Drawing.Size(1135, 557);
+            this.tp_hoa_don.Size = new System.Drawing.Size(1132, 732);
             this.tp_hoa_don.TabIndex = 1;
             this.tp_hoa_don.Text = "Hóa đơn";
             this.tp_hoa_don.UseVisualStyleBackColor = true;
@@ -488,7 +489,7 @@
             // 
             // btn_chinh_sua_hoadon
             // 
-            this.btn_chinh_sua_hoadon.Location = new System.Drawing.Point(981, 210);
+            this.btn_chinh_sua_hoadon.Location = new System.Drawing.Point(1015, 27);
             this.btn_chinh_sua_hoadon.Name = "btn_chinh_sua_hoadon";
             this.btn_chinh_sua_hoadon.Size = new System.Drawing.Size(97, 40);
             this.btn_chinh_sua_hoadon.TabIndex = 8;
@@ -522,18 +523,17 @@
             this.tc_hoa_don.Location = new System.Drawing.Point(8, 66);
             this.tc_hoa_don.Name = "tc_hoa_don";
             this.tc_hoa_don.SelectedIndex = 0;
-            this.tc_hoa_don.Size = new System.Drawing.Size(1124, 491);
+            this.tc_hoa_don.Size = new System.Drawing.Size(1128, 670);
             this.tc_hoa_don.TabIndex = 0;
             this.tc_hoa_don.SelectedIndexChanged += new System.EventHandler(this.tc_hoa_don_SelectedIndexChanged);
             // 
             // tp_chua_thanh_toan
             // 
-            this.tp_chua_thanh_toan.Controls.Add(this.btn_chinh_sua_hoadon);
             this.tp_chua_thanh_toan.Controls.Add(this.gv_hoadon_chuathanhtoan);
             this.tp_chua_thanh_toan.Location = new System.Drawing.Point(4, 25);
             this.tp_chua_thanh_toan.Name = "tp_chua_thanh_toan";
             this.tp_chua_thanh_toan.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_chua_thanh_toan.Size = new System.Drawing.Size(1116, 462);
+            this.tp_chua_thanh_toan.Size = new System.Drawing.Size(1120, 641);
             this.tp_chua_thanh_toan.TabIndex = 0;
             this.tp_chua_thanh_toan.Text = "Chưa thanh toán";
             this.tp_chua_thanh_toan.UseVisualStyleBackColor = true;
@@ -545,7 +545,7 @@
             this.gv_hoadon_chuathanhtoan.Name = "gv_hoadon_chuathanhtoan";
             this.gv_hoadon_chuathanhtoan.RowHeadersWidth = 51;
             this.gv_hoadon_chuathanhtoan.RowTemplate.Height = 24;
-            this.gv_hoadon_chuathanhtoan.Size = new System.Drawing.Size(941, 470);
+            this.gv_hoadon_chuathanhtoan.Size = new System.Drawing.Size(1114, 635);
             this.gv_hoadon_chuathanhtoan.TabIndex = 0;
             // 
             // tp_da_thanh_toan
@@ -554,7 +554,7 @@
             this.tp_da_thanh_toan.Location = new System.Drawing.Point(4, 25);
             this.tp_da_thanh_toan.Name = "tp_da_thanh_toan";
             this.tp_da_thanh_toan.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_da_thanh_toan.Size = new System.Drawing.Size(1116, 462);
+            this.tp_da_thanh_toan.Size = new System.Drawing.Size(1140, 641);
             this.tp_da_thanh_toan.TabIndex = 1;
             this.tp_da_thanh_toan.Text = "Đã thanh toán";
             this.tp_da_thanh_toan.UseVisualStyleBackColor = true;
@@ -577,7 +577,7 @@
             this.tp_thanh_vien.Controls.Add(this.btn_them_thanh_vien);
             this.tp_thanh_vien.Location = new System.Drawing.Point(4, 25);
             this.tp_thanh_vien.Name = "tp_thanh_vien";
-            this.tp_thanh_vien.Size = new System.Drawing.Size(1135, 557);
+            this.tp_thanh_vien.Size = new System.Drawing.Size(1132, 732);
             this.tp_thanh_vien.TabIndex = 2;
             this.tp_thanh_vien.Text = "Thành viên";
             this.tp_thanh_vien.UseVisualStyleBackColor = true;
@@ -589,12 +589,12 @@
             this.gv_thanh_vien.Name = "gv_thanh_vien";
             this.gv_thanh_vien.RowHeadersWidth = 51;
             this.gv_thanh_vien.RowTemplate.Height = 24;
-            this.gv_thanh_vien.Size = new System.Drawing.Size(1132, 491);
+            this.gv_thanh_vien.Size = new System.Drawing.Size(1126, 663);
             this.gv_thanh_vien.TabIndex = 7;
             // 
             // btn_tim_kiem_thanh_vien
             // 
-            this.btn_tim_kiem_thanh_vien.Location = new System.Drawing.Point(749, 20);
+            this.btn_tim_kiem_thanh_vien.Location = new System.Drawing.Point(778, 20);
             this.btn_tim_kiem_thanh_vien.Name = "btn_tim_kiem_thanh_vien";
             this.btn_tim_kiem_thanh_vien.Size = new System.Drawing.Size(29, 24);
             this.btn_tim_kiem_thanh_vien.TabIndex = 6;
@@ -603,7 +603,7 @@
             // 
             // txt_tim_kiem_thanh_vien
             // 
-            this.txt_tim_kiem_thanh_vien.Location = new System.Drawing.Point(784, 20);
+            this.txt_tim_kiem_thanh_vien.Location = new System.Drawing.Point(813, 20);
             this.txt_tim_kiem_thanh_vien.Name = "txt_tim_kiem_thanh_vien";
             this.txt_tim_kiem_thanh_vien.Size = new System.Drawing.Size(273, 22);
             this.txt_tim_kiem_thanh_vien.TabIndex = 5;
@@ -629,12 +629,13 @@
             // 
             // main_ban_hang
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.tc_ban_hang);
             this.Controls.Add(this.lbl_title);
             this.Name = "main_ban_hang";
-            this.Size = new System.Drawing.Size(1140, 807);
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Size = new System.Drawing.Size(1138, 807);
             this.Load += new System.EventHandler(this.main_ban_hang_Load);
             this.tc_ban_hang.ResumeLayout(false);
             this.tp_spdv.ResumeLayout(false);

@@ -15,11 +15,11 @@ using DBMS_Final_Project.database;
 
 namespace DBMS_Final_Project.view
 {
-    public partial class Fmanager : Form
+    public partial class UC_Management : UserControl
     {
         private ContextMenuStrip contextMenuStrip;
         static int ma;
-        public Fmanager()
+        public UC_Management()
         {
             InitializeComponent();
             // Khởi tạo ContextMenuStrip
@@ -64,66 +64,92 @@ namespace DBMS_Final_Project.view
 
         private void btn_SuaNhanVien_Click(object sender, EventArgs e)
         {
-            // Lấy dữ liệu từ các TextBox
-            int maNhanVien = Convert.ToInt32(txb_MaNV.Text);
-            string hoTen = txb_TenNV.Text.Trim();
-            DateTime ngaySinh = dtp_NgaySinhNV.Value;
-            string gioiTinh = cb_GioiTinh.Text.Trim(); // Giả sử cb_GioiTinh là ComboBox
-            string diaChi = txb_DiaChiNV.Text.Trim();
-            string sdt = txb_sdtNV.Text.Trim();
-            decimal luong = decimal.Parse(txb_LuongNV.Text); // Giả sử bạn sử dụng TextBox và đã đảm bảo giá trị hợp lệ
-            string congViec = txb_CongViec.Text.Trim();
-            int maNQL = Convert.ToInt32(txb_MaQL.Text.Trim());
-
-
-            // Nếu tất cả các kiểm tra đều hợp lệ, tiến hành gọi Stored Procedure
-            string[] paramNames = { "@Ma_Nhan_Vien", "@Ho_Ten", "@Ngay_Sinh", "@Gioi_Tinh", "@Dia_Chi", "@SDT", "@Luong", "@Cong_Viec", "@Ma_NQL" };
-            object[] paramValues = { maNhanVien, hoTen, ngaySinh, gioiTinh, diaChi, sdt, luong, congViec, maNQL };
-
-            // Gọi hàm để thực thi Stored Procedure
-            object result = db.getResultFromProc("sp_UpdateNhanVien", paramValues, paramNames);
-
-            if (result != null)
+            try
             {
-                string message = result.ToString(); // Kết quả là thông báo từ stored procedure
-                MessageBox.Show(message);
+                // Lấy dữ liệu từ các TextBox
+                int maNhanVien = Convert.ToInt32(txb_MaNV.Text);
+                string hoTen = txb_TenNV.Text.Trim();
+                DateTime ngaySinh = dtp_NgaySinhNV.Value;
+                string gioiTinh = cb_GioiTinh.Text.Trim();
+                string diaChi = txb_DiaChiNV.Text.Trim();
+                string sdt = txb_sdtNV.Text.Trim();
+                decimal luong = decimal.Parse(txb_LuongNV.Text);
+                string congViec = txb_CongViec.Text.Trim();
+                int maNQL = Convert.ToInt32(txb_MaQL.Text.Trim());
+
+                // Nếu tất cả các kiểm tra đều hợp lệ, tiến hành gọi Stored Procedure
+                string[] paramNames = { "@Ma_Nhan_Vien", "@Ho_Ten", "@Ngay_Sinh", "@Gioi_Tinh", "@Dia_Chi", "@SDT", "@Luong", "@Cong_Viec", "@Ma_NQL" };
+                object[] paramValues = { maNhanVien, hoTen, ngaySinh, gioiTinh, diaChi, sdt, luong, congViec, maNQL };
+
+                // Gọi hàm để thực thi Stored Procedure
+                object result = db.getResultFromProc("sp_UpdateNhanVien", paramValues, paramNames);
+
+                if (result != null)
+                {
+                    string message = result.ToString(); // Kết quả là thông báo từ stored procedure
+                    MessageBox.Show(message);
+                    LoadData();
+                }
+                else
+                {
+                    MessageBox.Show("Đã xảy ra lỗi khi thêm nhân viên.");
+                }
             }
-            else
+            catch (FormatException ex)
             {
-                MessageBox.Show("Đã xảy ra lỗi khi thêm nhân viên.");
+                // Bắt lỗi định dạng dữ liệu (ví dụ: số điện thoại không hợp lệ)
+                MessageBox.Show("Lỗi định dạng: " + ex.Message);
             }
-            LoadData();
+            catch (Exception ex)
+            {
+                // Bắt lỗi chung khác
+                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
+            }
         }
 
         private void btn_ThemNhanVien_Click(object sender, EventArgs e)
         {
-            string hoTen = txb_TenNV.Text;
-            DateTime ngaySinh = dtp_NgaySinhNV.Value; // Giả sử bạn sử dụng DateTimePicker
-            string gioiTinh = cb_GioiTinh.SelectedItem.ToString(); // Giả sử bạn sử dụng ComboBox
-            string diaChi = txb_DiaChiNV.Text;
-            string sdt = txb_sdtNV.Text.Trim();
-            decimal luong = decimal.Parse(txb_LuongNV.Text); // Giả sử bạn sử dụng TextBox và đã đảm bảo giá trị hợp lệ
-            string congViec = txb_CongViec.Text;
-            int maNQL = Convert.ToInt32(txb_MaQL.Text.Trim()); // Giả sử bạn sử dụng NumericUpDown hoặc tương tự
-
-            // Tham số cho stored procedure
-            string storedProcedure = "sp_ThemNhanVien"; // Tên stored procedure
-            string[] paramNames = new string[] { "@Ho_Ten", "@Ngay_Sinh", "@Gioi_Tinh", "@Dia_Chi", "@SDT", "@Luong", "@Cong_Viec", "@Ma_NQL" };
-            object[] paramValues = new object[] { hoTen, ngaySinh, gioiTinh, diaChi, sdt, luong, congViec, maNQL };
-
-            // Gọi hàm thực thi stored procedure
-            object result = db.getResultFromProc(storedProcedure, paramValues, paramNames);
-
-            // Xử lý kết quả trả về
-            if (result != null)
+            try
             {
-                string message = result.ToString(); // Kết quả là thông báo từ stored procedure
-                MessageBox.Show(message);
-                LoadData();
+
+
+                string hoTen = txb_TenNV.Text;
+                DateTime ngaySinh = dtp_NgaySinhNV.Value;
+                string gioiTinh = cb_GioiTinh.SelectedItem.ToString();
+                string diaChi = txb_DiaChiNV.Text;
+                string sdt = txb_sdtNV.Text.Trim();
+                decimal luong = decimal.Parse(txb_LuongNV.Text);
+                string congViec = txb_CongViec.Text;
+                int maNQL = Convert.ToInt32(txb_MaQL.Text.Trim());
+
+                // Tham số cho stored procedure
+                string storedProcedure = "sp_ThemNhanVien"; // Tên stored procedure
+                string[] paramNames = new string[] { "@Ho_Ten", "@Ngay_Sinh", "@Gioi_Tinh", "@Dia_Chi", "@SDT", "@Luong", "@Cong_Viec", "@Ma_NQL" };
+                object[] paramValues = new object[] { hoTen, ngaySinh, gioiTinh, diaChi, sdt, luong, congViec, maNQL };
+
+                // Gọi hàm thực thi stored procedure
+                object result = db.getResultFromProc(storedProcedure, paramValues, paramNames);
+
+                // Xử lý kết quả trả về
+                if (result != null)
+                {
+                    string message = result.ToString(); // Kết quả là thông báo từ stored procedure
+                    MessageBox.Show(message);
+                    LoadData();
+                }
+                else
+                {
+                    MessageBox.Show("Đã xảy ra lỗi khi thêm nhân viên.");
+                }
             }
-            else
+            catch (FormatException ex)
             {
-                MessageBox.Show("Đã xảy ra lỗi khi thêm nhân viên.");
+                MessageBox.Show("Lỗi định dạng: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
             }
         }
 
@@ -170,16 +196,16 @@ namespace DBMS_Final_Project.view
                 // Lấy đường dẫn hình ảnh từ cột "Duong_Dan" của bảng
                 string link = rowHA["Duong_Dan"].ToString();
 
-                // Chuyển đổi đường dẫn (nếu cần)
+                // Chuyển đổi đường dẫn 
                 link = imageLinkConverter.Convert(link).ToString();
 
                 // Tạo một PictureBox mới cho mỗi hình ảnh
                 PictureBox pictureBox = new PictureBox
                 {
-                    Width = 100, // Đặt chiều rộng của PictureBox
-                    Height = 100, // Đặt chiều cao của PictureBox
-                    SizeMode = PictureBoxSizeMode.StretchImage, // Chế độ hiển thị ảnh
-                    ImageLocation = link // Gán hình ảnh cho PictureBox từ đường dẫn file ảnh
+                    Width = 100,
+                    Height = 100,
+                    SizeMode = PictureBoxSizeMode.StretchImage,
+                    ImageLocation = link
                 };
                 pictureBox.Tag = ma;
                 pictureBox.MouseDown += PictureBox_MouseDown;
@@ -192,7 +218,7 @@ namespace DBMS_Final_Project.view
                 {
                     flp_HinhAnhVP.Controls.Add(pictureBox);
                 }
-                else
+                else if (loai == "dichvu")
                 {
                     flp_HinhAnhDV.Controls.Add(pictureBox);
                 }
@@ -219,7 +245,6 @@ namespace DBMS_Final_Project.view
             string imageLocation = contextMenuStrip.Tag as string;
             string filePath = imageLocation.Replace("file:///", "");
 
-            // Bước 2: Thay thế dấu gạch chéo (/) bằng dấu gạch chéo ngược (\)
             filePath = filePath.Replace("/", "\\");
 
             if (string.IsNullOrEmpty(filePath))
@@ -228,7 +253,7 @@ namespace DBMS_Final_Project.view
                 return;
             }
 
-            // Xác nhận trước khi xóa
+
             if (MessageBox.Show("Bạn có chắc chắn muốn xóa hình ảnh này?", "Xóa Ảnh", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 if (!File.Exists(filePath))
@@ -247,8 +272,7 @@ namespace DBMS_Final_Project.view
                     MessageBox.Show($"Lỗi khi xóa hình ảnh: {ex.Message}");
                     return;
                 }
-                filePath = filePath.Replace("D:/HQTCSDL/PetShop/DBMS_FinalProject/","");
-                MessageBox.Show(filePath);
+                filePath = filePath.Replace("D:/HK1_Nam3/DBMS/DBMS_FinalProject/", "");
                 // Gọi procedure để xóa thông tin hình ảnh khỏi cơ sở dữ liệu
                 string[] paramNames = { "@Ma_SPDV", "@Duong_Dan" };
                 object[] paramValues = { ma, filePath };
@@ -290,10 +314,10 @@ namespace DBMS_Final_Project.view
                     string selectedImagePath = openFileDialog.FileName;
 
                     // Đường dẫn lưu hình ảnh
-                    string imagePath = $"D:\\HQTCSDL\\PetShop\\DBMS_FinalProject\\assets\\images\\{maSPDV}\\" + Path.GetFileName(selectedImagePath);
+                    string imagePath = $"D:\\HK1_Nam3\\DBMS\\DBMS_FinalProject\\assets\\images\\{maSPDV}\\" + Path.GetFileName(selectedImagePath);
 
                     // Tạo thư mục nếu chưa tồn tại
-                    string directoryPath = $"D:\\HQTCSDL\\PetShop\\DBMS_FinalProject\\assets\\images\\{maSPDV}";
+                    string directoryPath = $"D:\\HK1_Nam3\\DBMS\\DBMS_FinalProject\\assets\\images\\{maSPDV}";
                     if (!Directory.Exists(directoryPath))
                     {
                         Directory.CreateDirectory(directoryPath);
@@ -373,110 +397,156 @@ namespace DBMS_Final_Project.view
                 }
 
                 // Tải lại dữ liệu sau khi cập nhật
-                
+
+            }
+            catch (FormatException ex)
+            {
+                // Bắt lỗi định dạng dữ liệu (ví dụ: số điện thoại không hợp lệ)
+                MessageBox.Show("Lỗi định dạng: " + ex.Message);
             }
             catch (Exception ex)
             {
-                // Hiển thị thông báo lỗi nếu có ngoại lệ xảy ra
-                MessageBox.Show("Lỗi: " + ex.Message);
+                // Bắt lỗi chung khác
+                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
             }
 
         }
 
         private void btn_ThemThuCung_Click(object sender, EventArgs e)
         {
-            // Lấy dữ liệu từ các TextBox và ComboBox
-            string loai = txb_Loai.Text.Trim();
-            string giong = txb_GiongTC.Text.Trim();
-            DateTime ngaySinh = dtp_NgaySinhTC.Value; // Ngày sinh từ DateTimePicker
-            string gioiTinh = cb_GioiTinh.Text.Trim(); // Giả sử bạn sử dụng ComboBox
-            string mauSac = txb_MauSacTC.Text.Trim();
-            decimal canNang = decimal.Parse(txb_CanNangTC.Text); // Đảm bảo bạn đã kiểm tra tính hợp lệ
-            string tinhTrangSucKhoe = txb_SucKhoeTC.Text.Trim();
-            string trangThai = txb_TrangThaiTC.Text.Trim();
-            int soLanTiem = Convert.ToInt32(txb_SoMuiTiemTC.Text); // Đảm bảo giá trị hợp lệ
-            string tenSPDV = txb_TenTC.Text.Trim(); // Tên sản phẩm/dịch vụ
-            string moTaSPDV = txb_MoTaTC.Text.Trim(); // Mô tả sản phẩm/dịch vụ
-            decimal giaBanGoc = decimal.Parse(txb_GiaGocTC.Text); // Giá bán gốc
-            decimal giaKhuyenMai = decimal.Parse(txb_GiaKMTC.Text); // Giá khuyến mại
-
-            // Tham số cho stored procedure
-            string storedProcedure = "sp_ThemThuCung"; // Tên stored procedure
-            string[] paramNames = new string[] { "@Loai", "@Giong", "@Ngay_Sinh", "@Gioi_Tinh", "@Mau_Sac", "@Can_Nang", "@Tinh_Trang_Suc_Khoe", "@Trang_Thai", "@So_Lan_Tiem", "@Ten_SPDV", "@Mo_Ta_SPDV", "@Gia_Ban_Goc", "@Gia_Khuyen_Mai" };
-            object[] paramValues = new object[] { loai, giong, ngaySinh, gioiTinh, mauSac, canNang, tinhTrangSucKhoe, trangThai, soLanTiem, tenSPDV, moTaSPDV, giaBanGoc, giaKhuyenMai };
-
-            // Gọi hàm thực thi stored procedure
-            object result = db.getResultFromProc(storedProcedure, paramValues, paramNames);
-
-            // Xử lý kết quả trả về
-            if (result != null)
+            try
             {
-                string message = result.ToString(); // Kết quả là thông báo từ stored procedure
-                MessageBox.Show(message);
-                LoadData();
+                // Lấy dữ liệu từ các TextBox và ComboBox
+                string loai = txb_Loai.Text.Trim();
+                string giong = txb_GiongTC.Text.Trim();
+                DateTime ngaySinh = dtp_NgaySinhTC.Value; // Ngày sinh từ DateTimePicker
+                string gioiTinh = cb_GioiTinhTC.Text.Trim(); // Giả sử bạn sử dụng ComboBox
+                string mauSac = txb_MauSacTC.Text.Trim();
+                decimal canNang = decimal.Parse(txb_CanNangTC.Text); // Đảm bảo bạn đã kiểm tra tính hợp lệ
+                string tinhTrangSucKhoe = txb_SucKhoeTC.Text.Trim();
+                string trangThai = txb_TrangThaiTC.Text.Trim();
+                int soLanTiem = Convert.ToInt32(txb_SoMuiTiemTC.Text); // Đảm bảo giá trị hợp lệ
+                string tenSPDV = txb_TenTC.Text.Trim(); // Tên sản phẩm/dịch vụ
+                string moTaSPDV = txb_MoTaTC.Text.Trim(); // Mô tả sản phẩm/dịch vụ
+                decimal giaBanGoc = decimal.Parse(txb_GiaGocTC.Text); // Giá bán gốc
+                decimal giaKhuyenMai = decimal.Parse(txb_GiaKMTC.Text); // Giá khuyến mại
+
+                // Tham số cho stored procedure
+                string storedProcedure = "sp_ThemThuCung"; // Tên stored procedure
+                string[] paramNames = new string[] { "@Loai", "@Giong", "@Ngay_Sinh", "@Gioi_Tinh", "@Mau_Sac", "@Can_Nang", "@Tinh_Trang_Suc_Khoe", "@Trang_Thai", "@So_Lan_Tiem", "@Ten_SPDV", "@Mo_Ta_SPDV", "@Gia_Ban_Goc", "@Gia_Khuyen_Mai" };
+                object[] paramValues = new object[] { loai, giong, ngaySinh, gioiTinh, mauSac, canNang, tinhTrangSucKhoe, trangThai, soLanTiem, tenSPDV, moTaSPDV, giaBanGoc, giaKhuyenMai };
+
+                // Gọi hàm thực thi stored procedure
+                object result = db.getResultFromProc(storedProcedure, paramValues, paramNames);
+
+                // Xử lý kết quả trả về
+                if (result != null)
+                {
+                    string message = result.ToString(); // Kết quả là thông báo từ stored procedure
+                    MessageBox.Show(message);
+                    LoadData();
+                }
+                else
+                {
+                    MessageBox.Show("Đã xảy ra lỗi khi thêm thú cưng.");
+                }
             }
-            else
+            catch (FormatException ex)
             {
-                MessageBox.Show("Đã xảy ra lỗi khi thêm thú cưng.");
+                // Bắt lỗi định dạng dữ liệu (ví dụ: số điện thoại không hợp lệ)
+                MessageBox.Show("Lỗi định dạng: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                // Bắt lỗi chung khác
+                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
             }
         }
 
         private void dgv_VatPham_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && !dgv_VatPham.Rows[e.RowIndex].IsNewRow)
+            try
             {
-                // Lấy dòng hiện tại
-                DataGridViewRow row = dgv_VatPham.Rows[e.RowIndex];
+                if (e.RowIndex >= 0 && !dgv_VatPham.Rows[e.RowIndex].IsNewRow)
+                {
+                    // Lấy dòng hiện tại
+                    DataGridViewRow row = dgv_VatPham.Rows[e.RowIndex];
 
-                // Đổ dữ liệu vào các TextBox
-                txb_MaVP.Text = row.Cells["Ma_Vat_Pham"].Value.ToString();
-                txb_TenVP.Text = row.Cells["Ten_San_Pham"].Value.ToString();
-                txb_ThuongHieuVP.Text = row.Cells["Thuong_Hieu"].Value.ToString();
-                dtp_HSDVP.Value = Convert.ToDateTime(row.Cells["Han_Su_Dung"].Value);
-                txb_SoLuongVP.Text = row.Cells["So_Luong_Ton_Kho"].Value.ToString();
-                txb_GiaGocVP.Text = row.Cells["Gia_Ban_Goc"].Value.ToString();
-                txb_GiaKMVP.Text = row.Cells["Gia_Khuyen_Mai"].Value.ToString();
-                txb_MoTaVP.Text = row.Cells["Mo_Ta_San_Pham"].Value.ToString();
-                flp_HinhAnhVP.Controls.Clear();
-                btn_ThemAnhVP.Tag = txb_MaVP.Text;
-                ma = Convert.ToInt32(txb_MaVP.Text);
-                Load_Hinh_Anh("vatpham");
+                    // Đổ dữ liệu vào các TextBox
+                    txb_MaVP.Text = row.Cells["Ma_Vat_Pham"].Value.ToString();
+                    txb_TenVP.Text = row.Cells["Ten_San_Pham"].Value.ToString();
+                    txb_ThuongHieuVP.Text = row.Cells["Thuong_Hieu"].Value.ToString();
+                    dtp_HSDVP.Value = Convert.ToDateTime(row.Cells["Han_Su_Dung"].Value);
+                    txb_SoLuongVP.Text = row.Cells["So_Luong_Ton_Kho"].Value.ToString();
+                    txb_GiaGocVP.Text = row.Cells["Gia_Ban_Goc"].Value.ToString();
+                    txb_GiaKMVP.Text = row.Cells["Gia_Khuyen_Mai"].Value.ToString();
+                    txb_MoTaVP.Text = row.Cells["Mo_Ta_San_Pham"].Value.ToString();
+                    flp_HinhAnhVP.Controls.Clear();
+                    btn_ThemAnhVP.Tag = txb_MaVP.Text;
+                    ma = Convert.ToInt32(txb_MaVP.Text);
+                    Load_Hinh_Anh("vatpham");
+                }
+            }
+            catch (FormatException ex)
+            {
+                // Bắt lỗi định dạng dữ liệu (ví dụ: số điện thoại không hợp lệ)
+                MessageBox.Show("Lỗi định dạng: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                // Bắt lỗi chung khác
+                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
             }
         }
 
         private void btn_SuaVP_Click(object sender, EventArgs e)
         {
-            // Lấy dữ liệu từ các TextBox
-            int maVatPham = Convert.ToInt32(txb_MaVP.Text); // Mã vật phẩm
-            string ten = txb_TenVP.Text.Trim(); // Tên vật phẩm
-            string moTa = txb_MoTaVP.Text.Trim(); // Mô tả vật phẩm
-            decimal giaBanGoc = decimal.Parse(txb_GiaGocVP.Text); // Giá bán gốc
-            decimal giaKhuyenMai = decimal.Parse(txb_GiaKMVP.Text); // Giá khuyến mãi
-            string thuongHieu = txb_ThuongHieuVP.Text.Trim(); // Thương hiệu
-            DateTime hanSuDung = dtp_HSDVP.Value; // Hạn sử dụng
-            int soLuongTonKho = Convert.ToInt32(txb_SoLuongVP.Text); // Số lượng tồn kho
-
-            // Nếu tất cả các kiểm tra đều hợp lệ, tiến hành gọi Stored Procedure
-            string[] paramNames = { "@Ma_Vat_Pham", "@Ten", "@Mo_Ta", "@Gia_Ban_Goc", "@Gia_Khuyen_Mai", "@Thuong_Hieu", "@Han_Su_Dung", "@So_Luong_Ton_Kho" };
-            object[] paramValues = { maVatPham, ten, moTa, giaBanGoc, giaKhuyenMai, thuongHieu, hanSuDung, soLuongTonKho };
-
-            // Gọi hàm để thực thi Stored Procedure
-            object result = db.getResultFromProc("sp_UpdateVatPham", paramValues, paramNames);
-
-            if (result != null)
+            try
             {
-                string message = result.ToString(); // Kết quả là thông báo từ stored procedure
-                MessageBox.Show(message);
-                LoadData();
+                // Lấy dữ liệu từ các TextBo
+                int maVatPham = Convert.ToInt32(txb_MaVP.Text); // Mã vật phẩm
+                string ten = txb_TenVP.Text.Trim(); // Tên vật phẩm
+                string moTa = txb_MoTaVP.Text.Trim(); // Mô tả vật phẩm
+                decimal giaBanGoc = decimal.Parse(txb_GiaGocVP.Text); // Giá bán gốc
+                decimal giaKhuyenMai = decimal.Parse(txb_GiaKMVP.Text); // Giá khuyến mãi
+                string thuongHieu = txb_ThuongHieuVP.Text.Trim(); // Thương hiệu
+                DateTime hanSuDung = dtp_HSDVP.Value; // Hạn sử dụng
+                int soLuongTonKho = Convert.ToInt32(txb_SoLuongVP.Text); // Số lượng tồn kho
+
+                // Nếu tất cả các kiểm tra đều hợp lệ, tiến hành gọi Stored Procedure
+                string[] paramNames = { "@Ma_Vat_Pham", "@Ten", "@Mo_Ta", "@Gia_Ban_Goc", "@Gia_Khuyen_Mai", "@Thuong_Hieu", "@Han_Su_Dung", "@So_Luong_Ton_Kho" };
+                object[] paramValues = { maVatPham, ten, moTa, giaBanGoc, giaKhuyenMai, thuongHieu, hanSuDung, soLuongTonKho };
+
+                // Gọi hàm để thực thi Stored Procedure
+                object result = db.getResultFromProc("sp_UpdateVatPham", paramValues, paramNames);
+
+                if (result != null)
+                {
+                    string message = result.ToString(); // Kết quả là thông báo từ stored procedure
+                    MessageBox.Show(message);
+                    LoadData();
+                }
+                else
+                {
+                    MessageBox.Show("Đã xảy ra lỗi khi cập nhật vật phẩm.");
+                }
             }
-            else
+            catch (FormatException ex)
             {
-                MessageBox.Show("Đã xảy ra lỗi khi cập nhật vật phẩm.");
+                // Bắt lỗi định dạng dữ liệu (ví dụ: số điện thoại không hợp lệ)
+                MessageBox.Show("Lỗi định dạng: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                // Bắt lỗi chung khác
+                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
             }
         }
 
         private void btn_ThemVP_Click(object sender, EventArgs e)
         {
+            try
+            {
                 // Lấy dữ liệu từ các TextBox
                 string ten = txb_TenVP.Text.Trim();
                 string moTa = txb_MoTaVP.Text.Trim();
@@ -489,7 +559,7 @@ namespace DBMS_Final_Project.view
                 // Nếu tất cả các kiểm tra đều hợp lệ, tiến hành gọi Stored Procedure
                 string[] paramNames = { "@Ten", "@Mo_Ta", "@Gia_Ban_Goc", "@Gia_Khuyen_Mai", "@Thuong_Hieu", "@Han_Su_Dung", "@So_Luong_Ton_Kho" };
                 object[] paramValues = { ten, moTa, giaBanGoc, giaKhuyenMai, thuongHieu, hanSuDung, soLuongTonKho };
-                
+
                 // Gọi hàm để thực thi Stored Procedure
                 object result = db.getResultFromProc("sp_InsertVatPham", paramValues, paramNames);
 
@@ -503,6 +573,17 @@ namespace DBMS_Final_Project.view
                 {
                     MessageBox.Show("Đã xảy ra lỗi khi thêm vật phẩm.");
                 }
+            }
+            catch (FormatException ex)
+            {
+                // Bắt lỗi định dạng dữ liệu (ví dụ: số điện thoại không hợp lệ)
+                MessageBox.Show("Lỗi định dạng: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                // Bắt lỗi chung khác
+                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
+            }
         }
 
         private void dgv_DichVu_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -561,8 +642,14 @@ namespace DBMS_Final_Project.view
                 }
 
             }
+            catch (FormatException ex)
+            {
+                // Bắt lỗi định dạng dữ liệu (ví dụ: số điện thoại không hợp lệ)
+                MessageBox.Show("Lỗi định dạng: " + ex.Message);
+            }
             catch (Exception ex)
             {
+                // Bắt lỗi chung khác
                 MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
             }
         }
@@ -597,8 +684,14 @@ namespace DBMS_Final_Project.view
                     MessageBox.Show("Đã xảy ra lỗi khi thêm dịch vụ.");
                 }
             }
+            catch (FormatException ex)
+            {
+                // Bắt lỗi định dạng dữ liệu (ví dụ: số điện thoại không hợp lệ)
+                MessageBox.Show("Lỗi định dạng: " + ex.Message);
+            }
             catch (Exception ex)
             {
+                // Bắt lỗi chung khác
                 MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
             }
         }
@@ -631,6 +724,57 @@ namespace DBMS_Final_Project.view
         private void btn_ThemAnhDV_Click(object sender, EventArgs e)
         {
             btnThemAnh_Click(sender, e);
+        }
+
+
+        private void btn_XoaNhanVien_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_SuaKH_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                // Lấy dữ liệu từ các TextBox
+                int maKhachHang = Convert.ToInt32(txb_MaKH.Text);
+                string tenKH = txb_TenKH.Text;
+                string sdtKH = txb_SDTKH.Text;
+                int diemTichLuy = Convert.ToInt32(txb_DiemTichLuy.Text);
+
+                // Tạo mảng tham số cho stored procedure
+                string[] paramNames = { "@Ma_Khach_Hang", "@Ten", "@SDT", "@Diem_Tich_Luy" };
+                object[] paramValues = { maKhachHang, tenKH, sdtKH, diemTichLuy };
+
+                // Gọi stored procedure để cập nhật thông tin khách hàng
+                object result = db.getResultFromProc("sp_SuaKhachHang", paramValues, paramNames, false);
+
+                // Hiển thị thông báo kết quả
+                if (result != null)
+                {
+                    MessageBox.Show(result.ToString()); // Hiển thị thông báo từ stored procedure
+                    LoadData();
+                }
+                else
+                {
+                    MessageBox.Show("Đã xảy ra lỗi khi cập nhật thông tin khách hàng.");
+                }
+            }
+            catch (FormatException ex)
+            {
+                // Bắt lỗi định dạng dữ liệu (ví dụ: số điện thoại không hợp lệ)
+                MessageBox.Show("Lỗi định dạng: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                // Bắt lỗi chung khác
+                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
+            }
         }
     }
 }

@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DBMS_Final_Project.database;
 
 namespace DBMS_Final_Project.view
 {

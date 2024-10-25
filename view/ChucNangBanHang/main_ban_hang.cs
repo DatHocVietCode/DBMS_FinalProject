@@ -3,6 +3,9 @@ using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using DBMS_Final_Project.database;
+
+
 namespace DBMS_Final_Project.view.ChucNangBanHang
 {
     public partial class main_ban_hang : UserControl

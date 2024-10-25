@@ -58,3 +58,7 @@ D:\HQTCSDL\PetShop\DBMS_FinalProject\obj\Debug\DBMS_Final_Project.exe
 D:\HQTCSDL\PetShop\DBMS_FinalProject\obj\Debug\DBMS_Final_Project.pdb
 >>>>>>> eef1b8a63abbf6f707caba420b04ac3a412e8c77
 D:\HK1_Nam3\DBMS\DBMS_FinalProject\obj\Debug\DBMS_Final_Project.view.Fmanager.resources
+D:\HK1_Nam3\DBMS\DBMS_FinalProject\obj\Debug\DBMS_Final_Project.view.UC_Management.resources
+D:\HK1_Nam3\DBMS\DBMS_FinalProject\obj\Debug\DBMS_Final_Project.view.ChucNangXemDoanhThu.UserControl1.resources
+D:\HK1_Nam3\DBMS\DBMS_FinalProject\obj\Debug\DBMS_Final_Project.view.ChucNangTinhLuong.UC_TinhLuong.resources
+D:\HK1_Nam3\DBMS\DBMS_FinalProject\obj\Debug\DBMS_Final_Project.view.ChucNangXemDoanhThu.UC_DoanhThu.resources

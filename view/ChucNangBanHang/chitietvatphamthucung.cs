@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using DBMS_Final_Project;
 using DBMS_Final_Project.control.converter;
 using static System.Windows.Forms.LinkLabel;
+using DBMS_Final_Project.database;
 namespace DBMS_Final_Project.view.ChucNangBanHang
 {
     public partial class chitietvatphamthucung : Form

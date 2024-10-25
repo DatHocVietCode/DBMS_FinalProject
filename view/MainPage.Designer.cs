@@ -33,8 +33,9 @@
             this.btnBanHang = new System.Windows.Forms.Button();
             this.btnQuanLy = new System.Windows.Forms.Button();
             this.btnPhanCa = new System.Windows.Forms.Button();
-            this.btnDoanhThu = new System.Windows.Forms.Button();
+            this.btnTinhLuong = new System.Windows.Forms.Button();
             this.flpScreen = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnDoanhThu = new System.Windows.Forms.Button();
             this.flowLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,6 +47,7 @@
             this.flowLayoutPanel4.Controls.Add(this.btnBanHang);
             this.flowLayoutPanel4.Controls.Add(this.btnQuanLy);
             this.flowLayoutPanel4.Controls.Add(this.btnPhanCa);
+            this.flowLayoutPanel4.Controls.Add(this.btnTinhLuong);
             this.flowLayoutPanel4.Controls.Add(this.btnDoanhThu);
             this.flowLayoutPanel4.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
@@ -83,6 +85,7 @@
             this.btnQuanLy.TabIndex = 1;
             this.btnQuanLy.Text = "Quản lý";
             this.btnQuanLy.UseVisualStyleBackColor = true;
+            this.btnQuanLy.Click += new System.EventHandler(this.btnQuanLy_Click);
             // 
             // btnPhanCa
             // 
@@ -92,20 +95,21 @@
             this.btnPhanCa.Name = "btnPhanCa";
             this.btnPhanCa.Size = new System.Drawing.Size(182, 50);
             this.btnPhanCa.TabIndex = 2;
-            this.btnPhanCa.Text = "Phân Ca";
+            this.btnPhanCa.Text = "Phân ca";
             this.btnPhanCa.UseVisualStyleBackColor = true;
             this.btnPhanCa.Click += new System.EventHandler(this.btnPhanCa_Click);
             // 
-            // btnDoanhThu
+            // btnTinhLuong
             // 
-            this.btnDoanhThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDoanhThu.Location = new System.Drawing.Point(0, 250);
-            this.btnDoanhThu.Margin = new System.Windows.Forms.Padding(0);
-            this.btnDoanhThu.Name = "btnDoanhThu";
-            this.btnDoanhThu.Size = new System.Drawing.Size(182, 50);
-            this.btnDoanhThu.TabIndex = 3;
-            this.btnDoanhThu.Text = "Doanh Thu";
-            this.btnDoanhThu.UseVisualStyleBackColor = true;
+            this.btnTinhLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTinhLuong.Location = new System.Drawing.Point(0, 250);
+            this.btnTinhLuong.Margin = new System.Windows.Forms.Padding(0);
+            this.btnTinhLuong.Name = "btnTinhLuong";
+            this.btnTinhLuong.Size = new System.Drawing.Size(182, 50);
+            this.btnTinhLuong.TabIndex = 3;
+            this.btnTinhLuong.Text = "Tính lương";
+            this.btnTinhLuong.UseVisualStyleBackColor = true;
+            this.btnTinhLuong.Click += new System.EventHandler(this.btnTinhLuong_Click);
             // 
             // flpScreen
             // 
@@ -115,11 +119,24 @@
             this.flpScreen.Size = new System.Drawing.Size(1501, 807);
             this.flpScreen.TabIndex = 0;
             // 
+            // btnDoanhThu
+            // 
+            this.btnDoanhThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDoanhThu.Location = new System.Drawing.Point(0, 300);
+            this.btnDoanhThu.Margin = new System.Windows.Forms.Padding(0);
+            this.btnDoanhThu.Name = "btnDoanhThu";
+            this.btnDoanhThu.Size = new System.Drawing.Size(182, 50);
+            this.btnDoanhThu.TabIndex = 4;
+            this.btnDoanhThu.Text = "Doanh thu";
+            this.btnDoanhThu.UseVisualStyleBackColor = true;
+            this.btnDoanhThu.Click += new System.EventHandler(this.btnDoanhThu_Click);
+            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1713, 829);
             this.Controls.Add(this.flowLayoutPanel4);
@@ -137,7 +154,8 @@
         private System.Windows.Forms.Button btnBanHang;
         private System.Windows.Forms.Button btnQuanLy;
         private System.Windows.Forms.Button btnPhanCa;
-        private System.Windows.Forms.Button btnDoanhThu;
+        private System.Windows.Forms.Button btnTinhLuong;
         private System.Windows.Forms.FlowLayoutPanel flpScreen;
+        private System.Windows.Forms.Button btnDoanhThu;
     }
 }

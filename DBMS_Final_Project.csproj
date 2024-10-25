@@ -83,11 +83,23 @@
       <DependentUpon>member_detail.cs</DependentUpon>
     </Compile>
     <Compile Include="objs\CaLam.cs" />
-    <Compile Include="view\AddNewSession.cs">
+    <Compile Include="view\ChucNangPhanCa\AddNewSession.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\AddNewSession.Designer.cs">
+    <Compile Include="view\ChucNangPhanCa\AddNewSession.Designer.cs">
       <DependentUpon>AddNewSession.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\ChucNangTinhLuong\UC_TinhLuong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\ChucNangTinhLuong\UC_TinhLuong.Designer.cs">
+      <DependentUpon>UC_TinhLuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\ChucNangXemDoanhThu\UC_DoanhThu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\ChucNangXemDoanhThu\UC_DoanhThu.Designer.cs">
+      <DependentUpon>UC_DoanhThu.cs</DependentUpon>
     </Compile>
     <Compile Include="view\DataGridViewTemplate\UC_DataGridView.cs">
       <SubType>UserControl</SubType>
@@ -95,11 +107,11 @@
     <Compile Include="view\DataGridViewTemplate\UC_DataGridView.Designer.cs">
       <DependentUpon>UC_DataGridView.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\Fmanager.cs">
-      <SubType>Form</SubType>
+    <Compile Include="view\ChucNangQuanLy\UC_Managament.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="view\Fmanager.Designer.cs">
-      <DependentUpon>Fmanager.cs</DependentUpon>
+    <Compile Include="view\ChucNangQuanLy\UC_Managament.Designer.cs">
+      <DependentUpon>UC_Managament.cs</DependentUpon>
     </Compile>
     <Compile Include="view\login.cs">
       <SubType>Form</SubType>
@@ -119,10 +131,10 @@
     <Compile Include="view\signup.Designer.cs">
       <DependentUpon>signup.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\UC_Schedule.cs">
+    <Compile Include="view\ChucNangPhanCa\UC_Schedule.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="view\UC_Schedule.Designer.cs">
+    <Compile Include="view\ChucNangPhanCa\UC_Schedule.Designer.cs">
       <DependentUpon>UC_Schedule.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -149,14 +161,20 @@
     <EmbeddedResource Include="view\ChucNangBanHang\member_detail.resx">
       <DependentUpon>member_detail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\AddNewSession.resx">
+    <EmbeddedResource Include="view\ChucNangPhanCa\AddNewSession.resx">
       <DependentUpon>AddNewSession.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\ChucNangTinhLuong\UC_TinhLuong.resx">
+      <DependentUpon>UC_TinhLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\ChucNangXemDoanhThu\UC_DoanhThu.resx">
+      <DependentUpon>UC_DoanhThu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\DataGridViewTemplate\UC_DataGridView.resx">
       <DependentUpon>UC_DataGridView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\Fmanager.resx">
-      <DependentUpon>Fmanager.cs</DependentUpon>
+    <EmbeddedResource Include="view\ChucNangQuanLy\UC_Managament.resx">
+      <DependentUpon>UC_Managament.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\login.resx">
       <DependentUpon>login.cs</DependentUpon>
@@ -167,7 +185,7 @@
     <EmbeddedResource Include="view\signup.resx">
       <DependentUpon>signup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\UC_Schedule.resx">
+    <EmbeddedResource Include="view\ChucNangPhanCa\UC_Schedule.resx">
       <DependentUpon>UC_Schedule.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
